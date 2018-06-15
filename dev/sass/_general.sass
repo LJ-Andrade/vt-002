@@ -20,9 +20,11 @@ $font1: 'Raleway', sans-serif
 body 
     background-color: #fff
     font-family: $font1
-    font-size: 1.2rem
+    font-size: 1rem
     color: #000000
     font-family: $font1
+    padding-top: 50px
+
 
 a
     color: blue
@@ -34,30 +36,22 @@ a
 p 
     margin-top: 10px
     margin-bottom: 15px
-    font-size: 1.3rem
-    line-height: 1.5rem
+    font-size: 1rem
+    line-height: 1.4rem
 
 h1
-    font-size: 3.5rem
+    font-size: 3rem
+    font-weight: 700
 h2
     font-size: 2.5rem
 h3
-    font-size: 2rem
-h4
     font-size: 1.8rem
-h5
+h4
     font-size: 1.5rem
+h5
+    font-size: 1.3rem
 h6
     font-size: 1.2rem
-
-    
-h1,h2,h3,h4,h5,h6
-    
-    margin-top: 1rem
-
-@media (max-width: 400px)
-    h1,span.title
-        font-size: 3rem !important
     
 section
     padding: 50px 0
@@ -73,6 +67,22 @@ ul
 
 hr
     width: 100%
+
+.theme-docs-wrapper
+    .panel
+        margin-bottom: 40px
+        .panel-body
+            border: 2px solid #cccccc
+            border-bottom: 0
+            padding: 15px
+        .html-code
+            background: #383838
+            color: #fff
+            padding: 15px
+            padding-bottom: 1px
+            font-size: .8rem
+            code
+                color: #fff
 
 // Helpers
 //-------------------------------------------------
