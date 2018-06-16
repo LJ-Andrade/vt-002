@@ -57,8 +57,14 @@ hr {
   width: 100%; }
 
 .theme-docs-wrapper .panel {
+  background: #B24592;
+  background: -webkit-gradient(linear, left top, right top, from(#F15F79), to(#B24592));
+  background: linear-gradient(to right, #F15F79, #B24592);
   margin-bottom: 40px; }
   .theme-docs-wrapper .panel .panel-body {
+    background: #383838;
+    background: -webkit-gradient(linear, left top, right top, from(#ccc), to(#383838));
+    background: linear-gradient(to right, #ccc, #383838);
     border: 2px solid #cccccc;
     border-bottom: 0;
     padding: 15px; }
