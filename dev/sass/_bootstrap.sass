@@ -5,68 +5,10 @@
 // Cards
 //-------------------------------------------------
 
-.card
-    padding: 10px
-    border: 0
-    background-color: transparent
-    padding: 0
-    .card-img-top
-        transition: all .5s ease 0s
-        &:hover
-            cursor: pointer
-    .card-body
-        border: 0
-        background-color: #ffffff
-        text-align: center
-        .card-link
-            background: #cccccc
-        
-        .card-list
-            li
-                border-bottom: 1px solid #ccc
-                text-align: center
-                padding: 10px 5px
                     
 // Buttons
 //-------------------------------------------------
 
-.btn-primary
-    color: #000000
-    background: #ffffff
-    border: 1px solid #000000
-    box-shadow: 3px 3px #000000
-    border-radius: 0
-    font-size: 1.2rem
-    padding: 1px 30px
-    &:hover,&:focus,&:active
-        color: #000000
-        background: #f9f9f9
-        border: 1px solid #000000
-        box-shadow: 1px 1px #000000
-
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle
-    background-color: #000000
-    color: #ffffff
-    border: 1px solid #ffffff
-
-.btn-secondary
-    color: #ffffff
-    background: #000000
-    border: 1px solid #000000
-    box-shadow: 3px 3px #000000
-    border-radius: 0
-    font-size: 1.2rem
-    padding: 1px 30px
-    &:hover,&:focus,&:active
-        color: #000000
-        background: #f9f9f9
-        border: 1px solid #000000
-        box-shadow: 1px 1px #000000
-
-.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle
-    background-color: #ffffff
-    color: #000000
-    border: 1px solid #000000
 
 
 // Badges -
@@ -133,22 +75,10 @@
 
 // Forms
 //-------------------------------------------------
-.input-group
-    input,.input-group-text
-        border-radius: 0
+.custom-checkbox,.custom-radio
+    .custom-control-label::before
+        left: -25px
 
-input.line-input
-    background: 0
-    border: 0
-    border-bottom: 1px solid #ffffff
-    border-left: 1px solid #ffffff
-    box-shadow: 0 0 transparent
-    color: #fff !important
-
-.form-group
-	color: $color1
-	input, textarea
-		border-bottom: 1px solid $color2
 
 // Placeholder
 //-------------------------------------------------
@@ -164,29 +94,6 @@ $placeholder: $gray-500
 .form-control::-ms-input-placeholder
 	color: $placeholder
 
-
-
-
-
-
-
 // Breadcrum
 //-------------------------------------------------
-.breadcrumb
-    border-radius: 0
-    background-color: $color3
-    border-bottom: 1px solid $color2
-    .breadcrumb-item
-        a
-            color: $color4
-        &:before
-            content: "• "
-            color: $color5
-    .active
-        color: $color5
-        &:before
-            content: "• "
-            color: $color5
-
-
 

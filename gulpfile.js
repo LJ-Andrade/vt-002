@@ -19,14 +19,16 @@ gulp.task('sass', ()=>
 );
 
 gulp.task('pug', ()=> 
-    gulp.src('./dev/views/**/*.pug')
-        .pipe(plumber())
+    gulp.src('./dev/views/**/*.pug',)
+        // .pipe(plumber())
         .pipe(pug({
             pretty: true,
             basedir: __dirname + '/dev/views/'
         }))
         .pipe(gulp.dest('./dist'))
 );
+
+
 
 gulp.task('default', () => {
     browserSync.init({

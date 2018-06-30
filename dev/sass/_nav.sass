@@ -1,49 +1,48 @@
-// Navbar
+// // Navbar
 //-------------------------------------------------
 .navbar
-    padding: .5rem 4rem
-    background-color: transparent
+    padding: 2px 15px
     z-index: 9999
     @include transition(0.5s)
-    .navbar-nav
-        li a
-            color: #000000  
-            font-weight: 600
-            font-size: 1rem 
-            font-weight: 400
-        .dropdown-menu
-            background: $color1
-            border-radius: 0
-            border: 0
-            left: -30px
-            padding: 5px
-            a
-                font-size: 1rem
-                color: #fff
-            .dropdown-item
-                &:hover,&:active,&:focus
-                    background-color: $color3
-        .dropdown-toggle::after
-            color: $color3
     .navbar-brand
         img
             max-width: 100%
             width: 70px
+//     .navbar-nav
+//         li a
+//             color: #000000  
+//             font-weight: 600
+//             font-size: 1rem 
+//             font-weight: 400
+//         .dropdown-menu
+//             background: $color1
+//             border-radius: 0
+//             border: 0
+//             left: -30px
+//             padding: 5px
+//             a
+//                 font-size: 1rem
+//                 color: #fff
+//             .dropdown-item
+//                 &:hover,&:active,&:focus
+//                     background-color: $color3
+//         .dropdown-toggle::after
+//             color: $color3
 
-.navbar-solid
-    background-color: #f9f9f9
-    @include transition(0.5s)
+// .navbar-solid
+//     background-color: #f9f9f9
+//     @include transition(0.5s)
 
-@media (max-width: 991px)
-    .navbar
-        padding: 5px 15px
-        .navbar-collapse
-            padding: 15px
-            padding-left: 25px
-            background-color: #ffff
-            margin-top: 15px
-            border: 1px solid rgba(#383838,.5)
-    .navbar-toggler
-        border-radius: 0
-        &:focus
-            border: 1px solid rgba(#383838,.5)
+// @media (max-width: 991px)
+//     .navbar
+//         padding: 5px 15px
+//         .navbar-collapse
+//             padding: 15px
+//             padding-left: 25px
+//             background-color: #ffff
+//             margin-top: 15px
+//             border: 1px solid rgba(#383838,.5)
+//     .navbar-toggler
+//         border-radius: 0
+//         &:focus
+//             border: 1px solid rgba(#383838,.5)
