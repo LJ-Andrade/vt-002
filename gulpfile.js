@@ -6,9 +6,9 @@ const gulp = require('gulp'),
     browserSync = require('browser-sync').create();
 
 gulp.task('sass', ()=> 
-    gulp.src('./dev/sass/*.sass')
+    gulp.src('./dev/sass/**/*.sass')
     .pipe(sass({
-        outputStyle: 'nested', 
+        outputStyle: 'compressed', 
         sourceComments: false // Comments in the css where the property is in sass
     }).on('error', sass.logError))
     .pipe(autoprefixer({
@@ -34,7 +34,7 @@ gulp.task('default', () => {
     browserSync.init({
         server: './dist'
     });
-    gulp.watch('./dev/sass/*.sass', ['sass']).on('change', browserSync.reload);
+    gulp.watch('./dev/sass/**/*.sass', ['sass']).on('change', browserSync.reload);
     gulp.watch('./dev/views/**/*.pug', ['pug']).on('change', browserSync.reload);
     gulp.watch('./dist/js/**/*.js', ['pug']).on('change', browserSync.reload);
 });

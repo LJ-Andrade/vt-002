@@ -1,34 +1,190 @@
 // Carousel full screen
-.carousel-home
-    border-bottom: 4px solid #000000
+.carousel-full
     z-index: 999
+    height: 100vh
+    position: relative
+    .carousel-control-prev,.carousel-control-next
+        padding-bottom: 150px !important
+    .carousel-content
+        position: absolute
+        width: 100%
+        height: 100%
+        margin-top: 20px
+        top: 0
+        left: 0
+        z-index: 9980
+        color: #fff
+        font-family: $font1
+        max-height: 100%
+        @include flex-center
+        .row
+            max-width: 600px
+            .image
+                margin-bottom: 20px
+                img
+                    @include box-shadow-soft()
     .carousel-item
-        max-height: 650px        
-        min-width: 100%
+        min-height: 300px
+        height: 100vh
 
-@media (max-width: 1500px)
-    .carousel-home
-        .carousel-item
-            max-height: 450px        
-            min-width: 100%
 
-// Carousel multiple items with text
-.carousel-multiple
-    .owl-item
-        text-align: center
+@media (max-width: 700px)
+    .carousel-full
+        .carousel-content
+            margin-top: 0
+            padding: 0 80px
+            .image
+                max-width: 100%
+
+
+@media (max-width: 500px)
+    .carousel-full .carousel-content
+        padding: 0 40px
+// BLOG
+// ---------------------------------------
+.blog-main
+    background-color: $gray-200
+    .blog-list
+        .blog-item
+            @include box-shadow-container()
+            margin-bottom: 30px
+            position: relative
+            .image
+                img
+                    width: 100%
+            .content
+                padding: 20px
+                background-color: #fff
+                text-align: justify
+            
+                h2
+                    font-weight: 700
+                .share
+                    position: absolute
+                    right: 0
+                    bottom: 0
+                    ul
+                        padding: 0
+                        margin: 0
+                        padding: 5px 15px
+                        li
+                            font-family: $font2
+                            display: inline
+                            padding: 5px
+                            a
+                                color: $color1
+                            &:hover
+                                cursor: pointer
+                                a
+                                    color: $color3
+                            span
+                                font-size: .8rem
+
+@media (max-width: 1400px)
+    .blog-main .blog-list .blog-item .content
+        padding: 20px 20px 40px
+
+@media (max-width: 1400px)
+    .blog-main > .container
+        width: 98%
+        max-width: 100%
+
+.blog-sidebar
+    text-align: center
+    .blog-widget
+        margin-bottom: 30px
+        @include box-shadow-container()
+        background-color: #fff
+        padding: 20px
+        font-family: $font2
+        font-size: 1rem
+        .subtitle
+            font-size: 1.1rem
+            margin-bottom: 10px
+    .social
+        .inner
+            // min-width: 150px
+            padding: 0
+            margin: 0
+            .col
+                
+                margin-bottom: 10px
+                padding: 0
+            i
+                width: 45px
+                height: 45px
+                position: relative
+                background: #ccc
+                color: #FFF
+                font-size: 1.2rem
+                text-align: center
+                float: left
+                padding: 14px
+                position: relative
+            span
+                position: absolute
+                left: 50px
+                bottom: 0
+                padding: 5px
+                text-align: left
+                line-height: 18px
+                font-size: 12px
+            .facebook
+                background-color: $facebook
+            .twitter
+                background-color: $twitter
+            .instagram
+                color: #383838
+            .rss
+                background: green
+            
+    .about-me
         img
-            max-width: 100%
-    .inner
-        background: #fff
+            border-radius: 50%
+            width: 100px
+        p
+            font-size: 1rem
+            text-align: justify
+    .list
+        text-align: left
+        li
+            position: relative
+            .detail
+                font-family: $font2
+                font-size: .8rem
+                position: absolute
+                right: 0
+                top: 0
+                padding: 5px
+    .tags
+        li
+            background-color: $gray-500
+            margin: 2px
+            padding: 5px
+            line-height: 2.5rem
+            a
+                font-size: .9rem
+                color: #fff
+    .polls
+        .content    
+            text-align: left
+    
+
+.blog-old-posts
+    .owl-item
         padding: 10px
-        p,h3
-            color: #000000
-        ul
-            list-style: none
-            margin-top: 20px
-            li
-                display: inline
+    .item
+        @include box-shadow-btn()
+        background: #fff
+        padding: 0
+        .content
+            padding: 15px
+            p,h4
                 color: #000000
+            a
+                color: #383838
+                font-size: 1rem
+        
 
 
 .sortable-gallery
@@ -60,8 +216,41 @@
                     cursor: pointer
                     opacity: 1
 
+// Elements 
+//-------------------------------------------------
+.horizontal-list
+    text-align: left
+    li
+        display: inline
+
+// Parallax
+//-------------------------------------------------
+.parallax-section
+    background: url(../img/parallax.jpg) no-repeat scroll center center / cover
+    background-size: cover
+     
+
 // Containers
 //-------------------------------------------------
+
+
+// Colors
+//-------------------------------------------------
+.dark-hr
+    border-top: 1px solid rgba(0, 0, 0, 0.57);
+.light-hr
+    border-top: 1px solid rgba(255, 255, 255, 0.30);
+.dark-gradient
+    @include linear-gradient(to bottom, $color1, $color2)
+
+.dark-text
+	color: $color1
+.white-text
+	color: #fff
+.dark-bg
+    background: $color1
+.white-bg
+    background: #fff
 
 
 // Texts
@@ -73,21 +262,6 @@
 
 // Elements
 //-----------------------------------------------    
-#go-to-top
-    padding: 4px 9px
-    position: fixed
-    right: 20px
-    bottom: 20px
-    border: 1px solid #fff
-    background-color: #000
-    width: 40px
-    height: 40px
-    color: #fff
-    font-size: 2rem
-    z-index: 99999
-    &:hover,&:active,&:focus
-        color: #fff
-        cursor: pointer
 
 
 // General PopOver
@@ -95,3 +269,79 @@
 //     .popover-body
 //         background: #1074fb
 //         color: #fff
+
+
+// Site Brand
+
+
+.site-brand
+    font-family: $font2
+    font-size: 2rem
+    color: #fff
+    .thin
+        font-weight: 300
+    .bold
+        color: $color1
+        font-weight: 800
+        
+.centered-brand
+    @include flex-center-top
+    position: absolute
+    left: 0
+    top: 0
+    padding: 10px
+    width: 100%
+    height: 50px
+    z-index: 9980
+    
+#go-to-top
+    padding: 4px 9px
+    position: fixed
+    right: 26px
+    bottom: 90px
+    border: 1px solid #fff
+    background-color: #000
+    width: 40px
+    height: 40px
+    color: #fff
+    font-size: 2rem
+    z-index: 9997
+    &:hover,&:active,&:focus
+        color: #fff
+        cursor: pointer
+    
+@media (max-width: 500px)
+    #go-to-top
+        right: 15px
+
+// Style Switcher
+//-----------------------------------------------    
+.style-switcher
+    position: fixed
+    top: 50px
+    left: 0px
+    background: #f9f9f9
+    z-index: 9970
+    padding: 10px 10px
+    @include flex-column
+    @include box-shadow-btn()
+    font-family: $font2
+    font-weight: 300
+    font-size: 1rem
+    ul
+        padding: 0
+        margin: 0
+        li
+            border-radius: 50%
+            width: 25px
+            height: 25px
+            margin-bottom: 5px
+            @include transition(0.2s)
+            &:hover
+                cursor: pointer
+                @include box-shadow-btn()
+            
+        .theme-dark
+            background-color: $color1
+        .theme-light
+            background-color: $gray-400

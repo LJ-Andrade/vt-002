@@ -53,86 +53,14 @@
 	-ms-flex-pack: center
 	justify-content: center
 
-@mixin flex-center-left
+@mixin flex-center-top
 	display: -webkit-box
 	display: -ms-flexbox
 	display: flex
-	-webkit-box-align: center
-	-ms-flex-align: center
-	-ms-grid-row-align: center
-	align-items: center
-
-	
-@mixin flex-center-right
-	display: -webkit-box
-	display: -ms-flexbox
-	display: flex
-	-webkit-box-align: right
-	-ms-flex-align: right
-	-ms-grid-row-align: right
-	align-items: right
-	-webkit-box-pack: end
-	-ms-flex-pack: end
-	justify-content: flex-end
-
-@mixin flex-center-grow
-	display: -webkit-box
-	display: -ms-flexbox
-	display: flex
-	-webkit-box-align: center
-	-ms-flex-align: center
-	-ms-grid-row-align: center
-	align-items: center
-	-webkit-box-pack: center
-	-ms-flex-pack: center
-	justify-content: center
-	-ms-flex-wrap: nowrap
-	flex-wrap: nowrap
-	flex-grow: 1
-
-@mixin flex-inline-centered
-	display: -webkit-box
-	display: -ms-flexbox
-	display: flex
-	-webkit-box-align: center
-	-ms-flex-align: center
-	-ms-grid-row-align: center
-	align-items: center
-	-webkit-box-pack: center
-	-ms-flex-pack: center
-	justify-content: center
-	flex-grow: 1
-
-@mixin flex-row-cent-wrap
-	display: -webkit-box
-	display: -ms-flexbox
-	display: flex
-	-webkit-box-align: center
-	-ms-flex-align: center
-	-ms-grid-row-align: center
-	align-items: center
-	-webkit-box-pack: center
-	-ms-flex-pack: center
-	justify-content: center
-	flex-wrap: wrap
-
-@mixin flex-justify-center
-	display: -webkit-box
-	display: -ms-flexbox
-	display: flex
-	-webkit-box-align: center
-	-ms-flex-align: center
-	-ms-grid-row-align: center
-	align-items: center
-	-webkit-box-pack: center
-	-ms-flex-pack: center
 	-webkit-box-pack: center
 	-ms-flex-pack: center
 	justify-content: center
 
-  
-// DECORATIONS
-//------------------------------------------
 
 // BOX-SHADOW
 
@@ -142,22 +70,42 @@
 	-moz-box-shadow: $horiz $vert $blur $spread $color
 	box-shadow: $horiz $vert $blur $spread $color
 
+@mixin box-shadow-right( $horiz : 13px , $vert : 5px , $blur : 54px , $spread : -10px , $color : rgba(0, 0, 0, 0.55))
+	-webkit-box-shadow: $horiz $vert $blur $spread $color
+	-moz-box-shadow: $horiz $vert $blur $spread $color
+	box-shadow: $horiz $vert $blur $spread $color
+
+@mixin box-shadow-soft( $horiz : 0px , $vert : 0px , $blur : 71px , $spread : 6px , $color : rgba(0, 0, 0, 0.30))
+	-webkit-box-shadow: $horiz $vert $blur $spread $color
+	-moz-box-shadow: $horiz $vert $blur $spread $color
+	box-shadow: $horiz $vert $blur $spread $color
+
+@mixin box-shadow2( $horiz : 15px , $vert : 16px , $blur : 35px , $spread : -7px , $color : rgba(0, 0, 0, 0.30))
+	-webkit-box-shadow: $horiz $vert $blur $spread $color
+	-moz-box-shadow: $horiz $vert $blur $spread $color
+	box-shadow: $horiz $vert $blur $spread $color
+
+@mixin box-shadow-btn( $horiz : 2px , $vert : 2px , $blur : 7px , $spread : 0px , $color : rgba(0, 0, 0, 0.30))
+	-webkit-box-shadow: $horiz $vert $blur $spread $color
+	-moz-box-shadow: $horiz $vert $blur $spread $color
+	box-shadow: $horiz $vert $blur $spread $color
+
+@mixin box-shadow-container( $horiz : 15px , $vert : 15px , $blur : 25px , $spread : -8px , $color : rgba(0, 0, 0, 0.36))
+	-webkit-box-shadow: $horiz $vert $blur $spread $color
+	-moz-box-shadow: $horiz $vert $blur $spread $color
+	box-shadow: $horiz $vert $blur $spread $color
+
 
 // GRADIENTS
 
-@mixin black-gradient
-	background: rgba(110,109,110,1)
-	background: -moz-radial-gradient(center, ellipse cover, rgba(110,109,110,1) 0%, rgba(56,56,56,1) 100%)
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(110,109,110,1)), color-stop(100%, rgba(56,56,56,1)))
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(110,109,110,1) 0%, rgba(56,56,56,1) 100%)
-	background: -o-radial-gradient(center, ellipse cover, rgba(110,109,110,1) 0%, rgba(56,56,56,1) 100%)
-	background: -ms-radial-gradient(center, ellipse cover, rgba(110,109,110,1) 0%, rgba(56,56,56,1) 100%)
-	background: radial-gradient(ellipse at center, rgba(110,109,110,1) 0%, rgba(56,56,56,1) 100%)
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6e6d6e', endColorstr='#383838', GradientType=1 )
-
-@mixin grad-radial($color1,$color2)
+// $direction = to top, to bottom, to left, to right
+@mixin linear-gradient($direction, $color1, $color2)
 	background: $color1
-	background: -moz-radial-gradient(center, ellipse cover, $color1 0%, $color2 100%)
-	background: -webkit-radial-gradient(center, ellipse cover, $color1 0%,$color2 100%)
-	background: radial-gradient(ellipse at center, $color1 0%,$color2 58%)
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color1, endColorstr=$color2,GradientType=1 )
+	background: linear-gradient($direction, $color1 0%, $color2 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color1, endColorstr=$color2, GradientType=0 )
+
+
+@mixin radial-gradient($color1, $color2)
+	background: $color1
+	background: radial-gradient(ellipse at center, $color1 0%, $color2 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color1, endColorstr=$color2, GradientType=1 )

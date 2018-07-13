@@ -4,12 +4,12 @@ $(document).ready(function(){
     new WOW().init();
 
     // Carousel | Vendor: Owl-Carousel-2 (https://owlcarousel2.github.io/OwlCarousel2/)
-    $('.carousel-multiple').owlCarousel({
-        loop:true,
-        margin:10,
+    $('.CarouselMultiple').owlCarousel({
+        loop: true,
+        margin: 2,
         autoplay: true,
         autoplayHoverPause: false,
-        responsiveClass:true,
+        responsiveClass: true,
         nav: false,
         responsive:{
             0: {
@@ -25,7 +25,7 @@ $(document).ready(function(){
                 items: 3
             },
             1300: {
-                items: 4
+                items: 3
             }
         }
     });
@@ -88,7 +88,6 @@ $(document).ready(function(){
 });
 
 // Show Navbar background on scroll
-// Go to top of page smooth
 $(document).ready(function($){
     $(window).scroll(function(){
         if ($(this).scrollTop() > 50) {
@@ -198,4 +197,35 @@ $(document).on('submit','#contact-form',function(e){
 });
 
 
+// Full Screen Navigation
+$('#NavFullTopTrigger, #NavFullBottomTrigger').click(function() {
+    const nav = $('#NavFull');
+    const body = $('body');
+    const trigger = $('#NavFullTopTrigger');
+    const bottomTrigger = $('#NavFullBottomTrigger');
 
+    if(nav.hasClass('nav-full-active'))
+    {
+        nav.removeClass('nav-full-active');
+        trigger.removeClass('navfull-top-active');
+        bottomTrigger.removeClass('navfull-bottom-active');
+        body.css('overflow','auto');
+    } else {
+        nav.addClass('nav-full-active');
+        trigger.addClass('navfull-top-active');
+        bottomTrigger.addClass('navfull-bottom-active');
+        body.css('overflow','hidden');
+    }
+});
+
+// Home Carousel
+$('.carousel-full').carousel({
+    pause: false,
+})
+
+// Skin Switcher
+$('.SkinSwitcher').click(function(){
+    const theme = $(this).data('theme');
+    const href = './css/'+theme;
+    $('#ThemeCss').attr('href', href);
+});

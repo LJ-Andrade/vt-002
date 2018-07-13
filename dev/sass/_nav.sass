@@ -4,10 +4,15 @@
     padding: 2px 15px
     z-index: 9999
     @include transition(0.5s)
+    background: #e4e4e4
+    border-bottom: 0
+    box-shadow: 0 0 transparent !important
+    a
+        color: $color1
     .navbar-brand
         img
             max-width: 100%
-            width: 70px
+            width: 150px
 //     .navbar-nav
 //         li a
 //             color: #000000  
@@ -29,9 +34,9 @@
 //         .dropdown-toggle::after
 //             color: $color3
 
-// .navbar-solid
-//     background-color: #f9f9f9
-//     @include transition(0.5s)
+.navbar-solid
+    background-color: #f9f9f9
+    @include transition(0.5s)
 
 // @media (max-width: 991px)
 //     .navbar
@@ -46,3 +51,157 @@
 //         border-radius: 0
 //         &:focus
 //             border: 1px solid rgba(#383838,.5)
+
+
+    
+// Full Screen Navigation
+.nav-full
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 0
+    visibility: hidden
+    opacity: 0
+    z-index: 9998
+    padding: 0
+    display: flex
+    -webkit-transition: opacity .35s, visibility .35s, height .35s
+    .left
+        display: flex
+        @include radial-gradient($color2, $color1)
+        @include flex-column
+        .menu-content
+            // @include box-shadow-right()
+            ul
+                text-align: center
+                margin-bottom: 0
+                li 
+                    padding: 15px 40px
+                    @include transition(0.2s)
+                    a
+                        font-size: 2rem
+                        font-family: $font2
+                        font-weight: 800
+                        color: #fff
+                    &:hover
+                        @include box-shadow2()
+                        cursor: pointer
+                        a
+                            color: #fff
+    .right
+        background: url(../img/menu-image.jpeg) no-repeat scroll center center / cover
+        background-size: cover
+        .overlay
+            position: absolute
+            width: 100%
+            height: 100%
+            left: 0
+            right: 0
+            @include flex-column
+            background-color: rgba($color2,.2)
+            .text
+                color: #fff
+                text-align: center
+
+@media (max-width: 640px)
+    .nav-full
+        .right
+            display: none
+
+.nav-full-active
+    opacity: 1
+    visibility: visible
+    height: 100%
+
+// Nav Trigger
+.navfull-trigger
+    position: fixed
+    cursor: pointer
+    z-index: 9999
+
+.navfull-top-trigger
+    top: 20px
+    right: 20px
+    padding: 0
+    height: 28px
+    width: 50px
+    .bar
+        background-color: $color1
+        display: block
+        width: 100%
+        height: 8px
+        border: 0
+        -webkit-transition: all .35s ease
+        transition: all .35s ease
+        border-bottom: 1px solid #ccc
+        + .bar
+            margin-top: 1px
+    .middle
+        top: 11px
+    .bottom
+        top: 22px
+    .toggle-button:hover
+        opacity: .7
+
+@media (max-width: 500px)
+    .navfull-top-trigger
+        padding: 0
+        margin: 0
+        right: 10px
+        top: 25px
+        width: 40px
+
+.navfull-top-active
+    .bar
+        background-color: #fff
+    .top
+        -webkit-transform: translateY(6px) translateX(0) rotate(45deg)
+    .middle
+        opacity: 0
+    .bottom
+        -webkit-transform: translateY(-12px) translateX(0) rotate(-45deg)
+
+// Bottom Nav Trigger
+.navfull-bottom-trigger
+    bottom: 20px
+    right: 20px
+    padding: 0
+    height: 50px
+    width: 50px
+    background: $color1
+    border-radius: 50%
+    .toggle-button
+        padding: 13px 11px 10px
+        .bar
+            background-color: #fff
+            display: block
+            width: 100%
+            height: 5px
+            border: 0
+            -webkit-transition: all .35s ease
+            transition: all .35s ease
+            margin-bottom: 5px
+            + .bar
+                margin-top: -1px
+        .middle
+            top: 11px
+        .bottom
+            top: 22px
+        .toggle-button:hover
+            opacity: .7
+
+@media (max-width: 500px)
+    .navfull-bottom-trigger
+        right: 10px
+
+.navfull-bottom-active
+    .bar
+        background-color: #fff
+    .top
+        -webkit-transform: translateY(6px) translateX(0) rotate(45deg)
+        margin-top: 4px
+    .middle
+        opacity: 0
+    .bottom
+        -webkit-transform: translateY(-12px) translateX(0) rotate(-45deg)
