@@ -53,9 +53,10 @@
 //             border: 1px solid rgba(#383838,.5)
 
 
-    
-// Full Screen Navigation
-.nav-full
+// ---------------------- //
+// Full Screen Navigation //
+// ---------------------- //
+.navfull
     position: fixed
     top: 0
     left: 0
@@ -109,18 +110,19 @@
         .right
             display: none
 
-.nav-full-active
+.navfull-active
     opacity: 1
     visibility: visible
     height: 100%
 
-// Nav Trigger
-.navfull-trigger
+// Nav button
+.navfull-button
     position: fixed
     cursor: pointer
     z-index: 9999
 
-.navfull-top-trigger
+// Top Nav button
+.navfull-top-button
     top: 20px
     right: 20px
     padding: 0
@@ -145,7 +147,7 @@
         opacity: .7
 
 @media (max-width: 500px)
-    .navfull-top-trigger
+    .navfull-top-button
         padding: 0
         margin: 0
         right: 10px
@@ -162,8 +164,8 @@
     .bottom
         -webkit-transform: translateY(-12px) translateX(0) rotate(-45deg)
 
-// Bottom Nav Trigger
-.navfull-bottom-trigger
+// Bottom Nav button
+.navfull-bottom-button
     bottom: 20px
     right: 20px
     padding: 0
@@ -192,7 +194,7 @@
             opacity: .7
 
 @media (max-width: 500px)
-    .navfull-bottom-trigger
+    .navfull-bottom-button
         right: 10px
 
 .navfull-bottom-active

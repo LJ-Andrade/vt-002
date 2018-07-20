@@ -1,10 +1,9 @@
-
 $(document).ready(function(){
     // Reveal elements on scroll | Vendor: Wowjs (https://wowjs.uk)
     new WOW().init();
 
     // Carousel | Vendor: Owl-Carousel-2 (https://owlcarousel2.github.io/OwlCarousel2/)
-    $('.CarouselMultiple').owlCarousel({
+    $('.carousel-multiple').owlCarousel({
         loop: true,
         margin: 2,
         autoplay: true,
@@ -31,8 +30,8 @@ $(document).ready(function(){
     });
 
     // Parallax image | Vendor: jQuery Parallax (https://github.com/IanLunn/jQuery-Parallax)
-    if ($(window).width() > 577) {
-        $('.parallax-section').parallax("90%", -0.5);
+    if ($(window).width() > 768) {
+        $('.contact-section').parallax("90%", -0.5);
     }
 
     // Enable Bootstrap PopOver | Vendor: Popper (https://popper.js.org/)
@@ -198,20 +197,21 @@ $(document).on('submit','#contact-form',function(e){
 
 
 // Full Screen Navigation
-$('#NavFullTopTrigger, #NavFullBottomTrigger').click(function() {
-    const nav = $('#NavFull');
+$('#navfull-top-btn, #navfull-bottom-btn').click(function() {
+    
+    const nav = $('#navfull');
     const body = $('body');
-    const trigger = $('#NavFullTopTrigger');
-    const bottomTrigger = $('#NavFullBottomTrigger');
+    const trigger = $('#navfull-top-btn');
+    const bottomTrigger = $('#navfull-bottom-btn');
 
-    if(nav.hasClass('nav-full-active'))
+    if(nav.hasClass('navfull-active'))
     {
-        nav.removeClass('nav-full-active');
+        nav.removeClass('navfull-active');
         trigger.removeClass('navfull-top-active');
         bottomTrigger.removeClass('navfull-bottom-active');
         body.css('overflow','auto');
     } else {
-        nav.addClass('nav-full-active');
+        nav.addClass('navfull-active');
         trigger.addClass('navfull-top-active');
         bottomTrigger.addClass('navfull-bottom-active');
         body.css('overflow','hidden');
@@ -223,9 +223,60 @@ $('.carousel-full').carousel({
     pause: false,
 })
 
+// Theme Options
+// ----------------------------------
+
+function themeOptions(action)
+{
+    if(action == 'open')
+    {
+        let mainDiv = $('.theme-options');
+        $('.open-icon').hide();
+        $('#theme-options').addClass('theme-options-open');
+        return;
+    }
+    if(action == 'close')
+    {
+        $('.open-icon').show();
+        $('#theme-options').removeClass('theme-options-open');
+        return;
+    }
+}
+
 // Skin Switcher
-$('.SkinSwitcher').click(function(){
+$('.skin-switcher').click(function(){
     const theme = $(this).data('theme');
     const href = './css/'+theme;
-    $('#ThemeCss').attr('href', href);
+    $('#theme-css').attr('href', href);
+    $('.skin-switcher .checked').removeClass('true');
+    $(this).children('.checked').addClass('true');
 });
+
+
+function styleManager(options){
+    // Theme Default Settings
+    var settings = $.extend({
+            nav: 'nav-fixed',
+            navButton: 'navfull-top-btn',
+            skin: 'light'
+        }, options);
+    
+        console.log(settings);
+        // Nav Button style and position
+        // ------------------------------
+        $('.navfull-button').addClass('Hidden');
+        $('#'+settings.navButton).removeClass('Hidden');
+
+        // Navigation style
+        // ------------------------------
+        $('.main-navigation').addClass('Hidden');
+        $('#'+settings.nav).removeClass('Hidden');
+        
+        if(settings.nav == 'nav-fixed')
+        {
+            $('.navfull-button').addClass('Hidden');
+            $('.site-fixed-brand').addClass('Hidden');
+        }
+
+};
+

@@ -1,4 +1,7 @@
-// Carousel full screen
+// CAROUSEL
+// ---------------------------------------
+
+// Bootstrap Carousel full screen
 .carousel-full
     z-index: 999
     height: 100vh
@@ -40,6 +43,7 @@
 @media (max-width: 500px)
     .carousel-full .carousel-content
         padding: 0 40px
+
 // BLOG
 // ---------------------------------------
 .blog-main
@@ -84,11 +88,12 @@
     .blog-main .blog-list .blog-item .content
         padding: 20px 20px 40px
 
-@media (max-width: 1400px)
-    .blog-main > .container
-        width: 98%
-        max-width: 100%
+@media (min-width: 769px) and (max-width: 991px) 
+    .blog-main
+        > .container 
+            max-width: 95% !important
 
+// Blog Sidebar
 .blog-sidebar
     text-align: center
     .blog-widget
@@ -137,7 +142,6 @@
                 color: #383838
             .rss
                 background: green
-            
     .about-me
         img
             border-radius: 50%
@@ -169,8 +173,21 @@
         .content    
             text-align: left
     
+@media (min-width: 769px) and (max-width: 1000px) 
+    .blog-sidebar .social .inner
+        i
+            width: 30px
+            height: 30px
+            font-size: .8rem
+            padding: 9px
+        span
+            left: 30px
+            bottom: -9px
+            padding: 5px
+            font-size: 10px
 
-.blog-old-posts
+
+.blog-featured-posts
     .owl-item
         padding: 10px
     .item
@@ -186,7 +203,8 @@
                 font-size: 1rem
         
 
-
+// Sorteable Gallery
+// ----------------
 .sortable-gallery
     .sortable-gallery-filters
         ul li
@@ -216,30 +234,66 @@
                     cursor: pointer
                     opacity: 1
 
+// Section Colors
+// ------------------------------------------------
+.color-section-1
+    background-color: $gray-300;
+    color: #fff
+
+.color-section-2
+    background-color: $gray-200;
+
+// Text Banner
+.text-banner
+    background-color: $gray-200
+
 // Elements 
 //-------------------------------------------------
+.widget-recent-post
+    .item
+        border-bottom: 1px solid rgba(#fff,.2)
+        padding-bottom: 5px
+        margin-bottom: 10px
+        h5,p
+            margin: 0
+        h5
+            font-size: 1rem
+            margin: 0
+        a
+            color: #fff
+            @include transition(0.2s)
+            &:visited,&:active,&:focus
+                color: #fff
+            &:hover
+                color: #ccc
+        p
+            font-family: $font2
+            font-size: 0.9rem
+            font-style: italic
+            font-weight: 400
+            color: #d0d0d0
+
 .horizontal-list
     text-align: left
     li
         display: inline
 
-// Parallax
+// Forms
 //-------------------------------------------------
-.parallax-section
-    background: url(../img/parallax.jpg) no-repeat scroll center center / cover
-    background-size: cover
-     
+
 
 // Containers
 //-------------------------------------------------
 
 
-// Colors
+// Decoration
 //-------------------------------------------------
+hr
+    border-top: 1px solid rgba(255, 255, 255, 0.30)
 .dark-hr
-    border-top: 1px solid rgba(0, 0, 0, 0.57);
+    border-top: 1px solid rgba(0, 0, 0, 0.57)
 .light-hr
-    border-top: 1px solid rgba(255, 255, 255, 0.30);
+    border-top: 1px solid rgba(255, 255, 255, 0.30)
 .dark-gradient
     @include linear-gradient(to bottom, $color1, $color2)
 
@@ -273,8 +327,7 @@
 
 // Site Brand
 
-
-.site-brand
+.site-brand,.site-fixed-brand
     font-family: $font2
     font-size: 2rem
     color: #fff
@@ -300,7 +353,7 @@
     right: 26px
     bottom: 90px
     border: 1px solid #fff
-    background-color: #000
+    background-color: $color1
     width: 40px
     height: 40px
     color: #fff
@@ -314,34 +367,90 @@
     #go-to-top
         right: 15px
 
-// Style Switcher
+// Theme Options
 //-----------------------------------------------    
-.style-switcher
+.theme-options
     position: fixed
-    top: 50px
-    left: 0px
-    background: #f9f9f9
-    z-index: 9970
-    padding: 10px 10px
-    @include flex-column
-    @include box-shadow-btn()
-    font-family: $font2
-    font-weight: 300
-    font-size: 1rem
-    ul
-        padding: 0
-        margin: 0
-        li
-            border-radius: 50%
-            width: 25px
-            height: 25px
-            margin-bottom: 5px
-            @include transition(0.2s)
+    height: 40px
+    width: 40px
+    left: 10px
+    top: 20%
+    overflow: hidden
+    border-radius: 50%
+    background: #fff
+    @include box-shadow-right()
+    transition: all .5s
+    transition-timing-function: cubic-bezier(0, 0.46, 0.7, 1.33)
+    z-index: 2000
+    padding: 8px
+    .open-icon
+        i
+            font-size: 1.5rem
+            color: #949494
+            -webkit-animation: rotation 10s infinite linear
             &:hover
                 cursor: pointer
-                @include box-shadow-btn()
             
-        .theme-dark
-            background-color: $color1
-        .theme-light
-            background-color: $gray-400
+    .content
+        position: relative
+        display: none
+        width: 0
+        height: 0
+        transition: all .5s
+        // transform: translateX(-500%) translateY(-50%)
+        .item
+            margin-bottom: 10px
+            .sub-title
+                font-size: .9rem
+                font-weight: 600
+                margin-bottom: 5px
+            .text
+                font-size: .8rem
+        .close
+            position: absolute
+            right: -5px
+            top: -30px
+            font-size: 1rem
+        ul.color
+            padding: 0
+            margin: 0
+            li
+                display: inline-block
+                position: relative
+                border-radius: 50%
+                width: 25px
+                height: 25px
+                @include transition(0.2s)
+                &:hover
+                    cursor: pointer
+                    @include box-shadow-btn()
+                .checked
+                    position: absolute
+                    display: none
+                    font-size: 1rem
+                    color: #fff
+                    padding: 2px 4px
+                .true
+                    display: block
+            .theme-dark
+                background-color: $color1
+            .theme-light
+                background-color: $gray-400
+    
+.theme-options-open
+    padding: 35px 10px 10px
+    border-radius: 5px
+    height: auto
+    width: auto
+    top: 15%
+    .content
+        height: auto
+        width: auto
+        display: block
+        // transform: translateX(0) translateY(0%)
+
+@-webkit-keyframes rotation
+	from
+		-webkit-transform: rotate(0deg)
+	to
+		-webkit-transform: rotate(359deg)

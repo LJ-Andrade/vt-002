@@ -28,8 +28,6 @@ gulp.task('pug', ()=>
         .pipe(gulp.dest('./dist'))
 );
 
-
-
 gulp.task('default', () => {
     browserSync.init({
         server: './dist'

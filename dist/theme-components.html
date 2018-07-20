@@ -18,23 +18,41 @@
     <link rel="stylesheet" href="./vendor/animate/animate.css"/>
     <!-- Theme Css-->
     <link rel="stylesheet" href="./css/styles.css"/>
-    <link rel="stylesheet" id="ThemeCss" href="./css/light-theme.css"/>
+    <link rel="stylesheet" id="theme-css" href="./css/light-theme.css"/>
     <!-- Your Css-->
     <link rel="stylesheet" href="./css/custom-styles.css"/>
   </head>
   <body>
     <!-- Page navigation-->
-    <!-- Full Screen NavBar-->
-    <div class="site-brand centered-brand"><span class="bold">Tell </span><span class="thin"> Something</span></div>
-    <!-- Top Nav Trigger-->
-    <div class="navfull-trigger navfull-top-trigger" id="NavFullTopTrigger">
+    <!-- =======================-->
+    <!-- Fixed Screen Navigation-->
+    <!-- =======================-->
+    <nav class="main-navigation navbar fixed-top navbar-expand Hidden" id="nav-fixed"><a class="navbar-brand" href="index.html">
+        <!-- img(src="../img/logo.png", alt="Logo")-->
+        <div class="site-brand"><span class="bold">Tell </span><span class="thin dark-text">Something</span></div></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+            <div class="dropdown-menu"><a class="dropdown-item" href="/docs/docs.html">Docs</a></div>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="/index.html#Contact">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- =======================-->
+    <!-- Full Screen Navigation-->
+    <!-- =======================-->
+    <!-- Top Nav Button-->
+    <div class="navfull-button navfull-top-button Hidden" id="navfull-top-btn">
       <div class="toggle-button"><span class="bar top"></span><span class="bar middle"></span><span class="bar bottom"></span></div>
     </div>
-    <!-- Bottom Nav Trigger-->
-    <div class="navfull-trigger navfull-bottom-trigger" id="NavFullBottomTrigger">
+    <!-- Bottom Nav Button-->
+    <div class="navfull-button navfull-bottom-button Hidden" id="navfull-bottom-btn">
       <div class="toggle-button"><span class="bar top"></span><span class="bar middle"></span><span class="bar bottom"></span></div>
     </div>
-    <nav class="nav-full col-md-12" id="NavFull">
+    <nav class="main-navigation navfull col-md-12" id="navfull">
       <div class="left col-md-6 col-xs-12">
         <div class="menu-content">
           <ul>
@@ -56,12 +74,46 @@
         </div>
       </div>
     </nav>
-    <!-- Style Switcher-->
-    <div class="style-switcher" id="StyleSwitcher">
-      <ul>
-        <li class="SkinSwitcher theme-dark" data-theme="dark-theme.css"></li>
-        <li class="SkinSwitcher theme-light" data-theme="light-theme.css"></li>
-      </ul>
+    <div class="site-fixed-brand centered-brand"><span class="bold">Tell </span><span class="thin"> Something</span></div>
+    <!-- Theme Options-->
+    <div class="theme-options" id="theme-options">
+      <div class="open-icon" onclick="themeOptions('open')"><i class="fa fa-cog"></i></div>
+      <div class="content">
+        <div class="close" onclick="themeOptions('close')"><i class="fa fa-times"></i></div>
+        <div class="item">
+          <div class="sub-title">Skin Color</div>
+          <ul class="color">
+            <li class="skin-switcher theme-dark" data-theme="dark-theme.css">
+              <div class="checked"><i class="fa fa-check"></i></div>
+            </li>
+            <li class="skin-switcher theme-light" data-theme="light-theme.css">
+              <div class="checked true"><i class="fa fa-check"></i></div>
+            </li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="sub-title">Navigation</div>
+          <form class="form-small">
+            <div class="form-group">
+              <select class="form-control" id="exampleFormControlSelect2">
+                <option selected="selected" onClick="styleManager({nav: 'nav-fixed'})">Fixed Top</option>
+                <option onClick="styleManager({nav: 'navfull'})"> Full Screen</option>
+              </select>
+            </div>
+          </form>
+        </div>
+        <div class="item">
+          <div class="sub-title">Nav Button Position</div>
+          <form class="form-small">
+            <div class="form-group">
+              <select class="form-control" id="exampleFormControlSelect2">
+                <option selected="selected" onClick="styleManager({nav: 'navfull', navButton: 'navfull-top-btn'})">Top</option>
+                <option onClick="styleManager({nav: 'navfull', navButton: 'navfull-bottom-btn'})">Bottom</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
     <!-- Content-->
     <section>
@@ -250,10 +302,10 @@
     <div id="go-to-top"><i class="fas fa-sort-up"></i></div>
     <!-- Scripts and html closing-->
     <!-- Footer | CopyRights	-->
-    <footer>
+    <footer class="color-section-1">
       <div class="container-fluid">
         <div class="row-centered">
-          <p>Cheff Theme - By <a href="https://vimana.studio">Vimana Studio </a>- 2018</p>
+          <div class="site-brand"><span class="bold">Tell </span><span class="thin dark-text">Something</span></div>By <a href="https://vimana.studio">Vimana Studio </a>- 2018
         </div>
       </div>
     </footer>
@@ -266,5 +318,6 @@
     <script src="./vendor/magnific-popup/magnific-popup.min.js"></script>
     <script src="./vendor/wow/wow.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/theme-configuration.js"></script>
   </body>
 </html>

@@ -22,9 +22,19 @@
 
 // Forms
 //-------------------------------------------------
-.custom-checkbox,.custom-radio
-    .custom-control-label::before
-        left: -25px
+
+.form-group
+    input,textarea,select
+        border: 1px solid #ccc
+        background: #fff
+        border-radius: 0
+    button
+        margin-top: 10px
+.form-small
+	select.form-control:not([size]):not([multiple])
+		height: 30px
+		font-size: .8rem
+		padding: 4px 5px
 
 // Placeholder
 //-------------------------------------------------
