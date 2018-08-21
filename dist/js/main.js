@@ -87,15 +87,15 @@ $(document).ready(function(){
 });
 
 // Show Navbar background on scroll
-$(document).ready(function($){
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 50) {
-            $('.navbar').addClass('navbar-solid');
-        } else {
-            $('.navbar').removeClass('navbar-solid');
-        }
-    });
-});
+// $(document).ready(function($){
+//     $(window).scroll(function(){
+//         if ($(this).scrollTop() > 50) {
+//             $('.navbar').addClass('navbar-solid');
+//         } else {
+//             $('.navbar').removeClass('navbar-solid');
+//         }
+//     });
+// });
 
 // Go to top of page smooth
 $(document).ready(function($){
@@ -151,8 +151,6 @@ $(document).ready(function($){
 $(function () {
     $('[data-toggle="tooltip"]').tooltip()
 })
-
-
 
 
 // Ajax Contact form sender
@@ -218,6 +216,14 @@ $('#navfull-top-btn, #navfull-bottom-btn').click(function() {
     }
 });
 
+// Fixed NavBar Transition
+$(function () {
+    $(document).scroll(function () {
+        var $nav = $("#nav-fixed");
+        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+    });
+});
+
 // Home Carousel
 $('.carousel-full').carousel({
     pause: false,
@@ -261,22 +267,25 @@ function styleManager(options){
             skin: 'light'
         }, options);
     
-        console.log(settings);
-        // Nav Button style and position
-        // ------------------------------
+    // Nav Button style and position
+    // ------------------------------
+    $('.navfull-button').addClass('Hidden');
+    $('#'+settings.navButton).removeClass('Hidden');
+    
+    // Navigation style
+    // ------------------------------
+    $('.main-navigation').addClass('Hidden');
+    $('#'+settings.nav).removeClass('Hidden');
+    
+    if(settings.nav == 'nav-fixed' || settings.nav == 'nav-top')
+    {
         $('.navfull-button').addClass('Hidden');
-        $('#'+settings.navButton).removeClass('Hidden');
-
-        // Navigation style
-        // ------------------------------
-        $('.main-navigation').addClass('Hidden');
-        $('#'+settings.nav).removeClass('Hidden');
-        
-        if(settings.nav == 'nav-fixed')
-        {
-            $('.navfull-button').addClass('Hidden');
-            $('.site-fixed-brand').addClass('Hidden');
-        }
-
+        $('.site-fixed-brand').addClass('Hidden');
+        $('#nav-button-position').hide();
+        $('.site-fixed-brand').hide();
+    } else {
+        $('#nav-button-position').show();
+        $('.site-fixed-brand').show();
+    }
 };
 

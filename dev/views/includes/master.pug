@@ -45,9 +45,10 @@ html(lang="en")
 					form.form-small
 						.form-group
 							select#exampleFormControlSelect2.form-control
-								option(selected onClick="styleManager({nav: 'nav-fixed'})") Fixed Top
-								option(onClick="styleManager({nav: 'navfull'})")  Full Screen
-				.item
+								option(onClick="styleManager({nav: 'nav-top'})") NavBar Top
+								option(onClick="styleManager({nav: 'nav-fixed'})") NavBar Fixed Top
+								option(onClick="styleManager({nav: 'navfull'})") Full Screen
+				.item#nav-button-position
 					.sub-title Nav Button Position
 					form.form-small
 						.form-group

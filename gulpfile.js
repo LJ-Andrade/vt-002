@@ -19,7 +19,7 @@ gulp.task('sass', ()=>
 );
 
 gulp.task('pug', ()=> 
-    gulp.src('./dev/views/**/*.pug',)
+    gulp.src('./dev/views/**/*.pug')
         // .pipe(plumber())
         .pipe(pug({
             pretty: true,

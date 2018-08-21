@@ -7,7 +7,8 @@
 // ----------------------------------------------------------------
 // Navigation menu style
 // You can choose between some navigation menu styles: 
-// - {nav: 'nav-fixed'} (Fixed Top Menu)
+// - {nav: 'nav-fixed'} (Fixed Top NavBar)
+// - {nav: 'nav-top'} (Top NavBar)
 // - {nav: 'navfull'} (FullScreen Menu) 
 // ----------------------------------------------------------------
 
@@ -20,5 +21,5 @@
 
 // Init Style Manager
 styleManager({
-    nav: 'navfull'
+    nav: 'nav-fixed'
 });
