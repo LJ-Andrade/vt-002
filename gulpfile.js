@@ -20,7 +20,7 @@ gulp.task('sass', ()=>
 
 gulp.task('pug', ()=> 
     gulp.src('./dev/views/**/*.pug')
-        // .pipe(plumber())
+        .pipe(plumber())
         .pipe(pug({
             pretty: true,
             basedir: __dirname + '/dev/views/'

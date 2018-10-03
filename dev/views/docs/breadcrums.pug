@@ -1,6 +1,6 @@
 extends /includes/master-docs.pug
 block content
-	- var currentUrl = 'breadcrums.html'
+	- var currentUrl = 'breadcrums.html'	
 	section
 		.container-fluid
 			.row
@@ -34,3 +34,26 @@ block content
 											li.breadcrumb-item
 												a(href='#') Library
 											li.breadcrumb-item.active(aria-current='page') Data
+								.panel-footer
+									pre
+										code.html
+											| &lt;nav aria-label=&quot;breadcrumb&quot;&gt;
+											|   &lt;ol class=&quot;breadcrumb&quot;&gt;
+											|     &lt;li class=&quot;breadcrumb-item active&quot; aria-current=&quot;page&quot;&gt;Home&lt;/li&gt;
+											|   &lt;/ol&gt;
+											| &lt;/nav&gt;
+											| 
+											| &lt;nav aria-label=&quot;breadcrumb&quot;&gt;
+											|   &lt;ol class=&quot;breadcrumb&quot;&gt;
+											|     &lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+											|     &lt;li class=&quot;breadcrumb-item active&quot; aria-current=&quot;page&quot;&gt;Library&lt;/li&gt;
+											|   &lt;/ol&gt;
+											| &lt;/nav&gt;
+											| 
+											| &lt;nav aria-label=&quot;breadcrumb&quot;&gt;
+											|   &lt;ol class=&quot;breadcrumb&quot;&gt;
+											|     &lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+											|     &lt;li class=&quot;breadcrumb-item&quot;&gt;&lt;a href=&quot;#&quot;&gt;Library&lt;/a&gt;&lt;/li&gt;
+											|     &lt;li class=&quot;breadcrumb-item active&quot; aria-current=&quot;page&quot;&gt;Data&lt;/li&gt;
+											|   &lt;/ol&gt;
+											| &lt;/nav&gt;

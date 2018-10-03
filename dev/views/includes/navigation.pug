@@ -3,7 +3,7 @@
 // ===========================
 
 nav#nav-fixed.main-navigation.navbar.fixed-top.navbar-expand-lg.navbar-light.Hidden
-	a.navbar-brand(href='#') 
+	a.navbar-brand(href='index.html') 
 		.site-brand
 			span.bold Tell 
 			span.thin.dark-text Something
@@ -12,26 +12,26 @@ nav#nav-fixed.main-navigation.navbar.fixed-top.navbar-expand-lg.navbar-light.Hid
 	#navbar-fixed-top.collapse.navbar-collapse
 		ul.navbar-nav.ml-auto
 			li.nav-item.active
-				a.nav-link(href='"/index.html"')
+				a.nav-link(href='index.html')
 					| Home 
 					span.sr-only (current)
 			li.nav-item
-				a.nav-link(href='#') Link
+				a.nav-link(href='docs/docs.html') Docs
 			li.nav-item.dropdown
 				a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
 					| Components
 				.dropdown-menu(aria-labelledby='navbarDropdown')
-					a(href="/docs/docs.html").dropdown-item Docs
+					a(href="docs/docs.html").dropdown-item Item
 					
 			li.nav-item
-				a(href="/index.html#Contact").nav-link Contact Us
+				a(href="index.html#Contact").nav-link Contact Us
 
 // =======================
 // Navigation Top NavBar
 // =======================
 
 nav#nav-top.main-navigation.navbar.navbar-expand-lg.navbar-light.Hidden
-	a.navbar-brand(href='#') 
+	a.navbar-brand(href='index.html') 
 		.site-brand
 			span.bold Tell 
 			span.thin.dark-text Something
@@ -40,7 +40,7 @@ nav#nav-top.main-navigation.navbar.navbar-expand-lg.navbar-light.Hidden
 	#navbar-top.collapse.navbar-collapse
 		ul.navbar-nav.ml-auto
 			li.nav-item.active
-				a.nav-link(href='"/index.html"')
+				a.nav-link(href="index.html")
 					| Home 
 					span.sr-only (current)
 			li.nav-item
@@ -58,7 +58,6 @@ nav#nav-top.main-navigation.navbar.navbar-expand-lg.navbar-light.Hidden
 // Full Screen Navigation
 // =======================
 
-
 // Top Nav Button
 #navfull-top-btn.navfull-button.navfull-top-button.Hidden
 	.toggle-button
@@ -73,7 +72,7 @@ nav#nav-top.main-navigation.navbar.navbar-expand-lg.navbar-light.Hidden
 		span.bar.middle
 		span.bar.bottom
  
- 
+// Full Screen Navigation 
 nav#navfull.main-navigation.navfull.col-md-12
 	.left.col-md-6.col-xs-12
 		.menu-content
@@ -101,6 +100,8 @@ nav#navfull.main-navigation.navfull.col-md-12
 					| Teach something.
 					br
 					| Tell.
+
+// Site Brand (Full Screen Navigation)
 .site-fixed-brand.centered-brand
 	span.bold Tell 
 	span.thin  Something

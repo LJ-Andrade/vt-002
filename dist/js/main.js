@@ -29,6 +29,12 @@ $(document).ready(function(){
         }
     });
 
+    // Home Carousel
+    $('.carousel-full').carousel({
+        pause: false,
+        mergeFit: true
+    })
+
     // Parallax image | Vendor: jQuery Parallax (https://github.com/IanLunn/jQuery-Parallax)
     if ($(window).width() > 768) {
         $('.contact-section').parallax("90%", -0.5);
@@ -224,10 +230,7 @@ $(function () {
     });
 });
 
-// Home Carousel
-$('.carousel-full').carousel({
-    pause: false,
-})
+
 
 // Theme Options
 // ----------------------------------
@@ -261,6 +264,7 @@ $('.skin-switcher').click(function(){
 
 function styleManager(options){
     // Theme Default Settings
+    console.log("OK");
     var settings = $.extend({
             nav: 'nav-fixed',
             navButton: 'navfull-top-btn',

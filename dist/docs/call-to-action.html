@@ -11,28 +11,28 @@
     <link rel="icon" href="../img/favicon.png" type="image/png"/>
     <!-- Vendor Css-->
     <link rel="stylesheet" href="../css/bootstrap.css"/>
-    <link rel="stylesheet" href="../vendor/owl-carousel/owl.carousel.min.css"/>
-    <link rel="stylesheet" href="../vendor/owl-carousel/owl.theme.default.min.css"/>
     <link rel="stylesheet" href="../vendor/font-awesome/css/all.css"/>
-    <link rel="stylesheet" href="../vendor/magnific-popup/magnific-popup.css"/>
     <link rel="stylesheet" href="../vendor/animate/animate.css"/>
+    <!-- Code Highligh-->
+    <!-- https://highlightjs.org/usage/-->
+    <link rel="stylesheet" href="../vendor/highlight/styles/ascetic.css"/>
     <!-- Theme Css-->
     <link rel="stylesheet" href="../css/styles.css"/>
     <link rel="stylesheet" href="../css/docs-styles.css"/>
   </head>
   <body style="margin-top: 40px">
-    <!-- Page navigation-->
-    <nav class="navbar fixed-top navbar-expand"><a class="navbar-brand" href="index.html">
-        <!-- img(src="../img/logo.png", alt="Logo")-->
+    <!-- Docs navigation-->
+    <nav class="main-navigation navbar fixed-top navbar-expand-lg navbar-light"><a class="navbar-brand" href="../index.html"> 
         <div class="site-brand"><span class="bold">Tell </span><span class="thin dark-text">Something</span></div></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-      <div class="collapse navbar-collapse">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-fixed-top" aria-controls="navbar-fixed-top" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbar-fixed-top">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
-            <div class="dropdown-menu"><a class="dropdown-item" href="/docs/docs.html">Docs</a></div>
+          <li class="nav-item active"><a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
+          <li class="nav-item"><a class="nav-link" href="docs/docs.html">Docs</a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Components</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown"></div>
           </li>
-          <li class="nav-item"><a class="nav-link" href="/index.html#Contact">Contact Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#Contact">Contact Us</a></li>
         </ul>
       </div>
     </nav>
@@ -261,7 +261,6 @@
       </div>
     </footer>
     <script src="../vendor/jquery-3.3.1/jquery-3.3.1.min.js"></script>
-    <script src="https://unpkg.com/ionicons@4.2.0/dist/ionicons.js"></script>
     <script src="../vendor/bootstrap/popper.min.js"></script>
     <script src="../vendor/bootstrap/bootstrap.min.js"></script>
     <script src="../vendor/owl-carousel/owl.carousel.min.js"></script>
@@ -270,5 +269,7 @@
     <script src="../vendor/magnific-popup/magnific-popup.min.js"></script>
     <script src="../vendor/wow/wow.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../vendor/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </body>
 </html>

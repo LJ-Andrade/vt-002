@@ -1,6 +1,6 @@
 extends includes/master.pug
 block content
-	
+
 	// ==================
 	//    PAGE CONTENT   
 	// ==================
@@ -12,20 +12,20 @@ block content
 				img.d-block(src="img/slider1.jpeg" alt="First slide")
 				.carousel-content
 					.row
-						.col-md-12.image
-							img(src="img/slider-item2.jpeg").img-fluid
-						.col-md-12.text
-							h4.bold Lorem ipsum dolor sit.
-							span.thin Nobis dolore officia esse natus dolorem eius perferendis ut expedita quibusdam debitis, aliquid corrupti repudiandae rem voluptates molestiae cumque officiis quas accusamus.
+						.col-md-12.text.dark-text
+							h1.bold LOREMP IPSUM DOLOR
+							p.thin Nobis dolore officia esse natus dolorem eius perferendis ut expedita quibusdam debitis, aliquid corrupti repudiandae rem voluptates molestiae cumque officiis quas accusamus. 
+							button.btn.btn-primary Read Me 
+							button.btn.btn-secondary.btn-outline-secondary Contact Me 
 			.carousel-item
 				img.d-block(src="img/slider2.jpeg" alt="First slide")
 				.carousel-content
 					.row
-						.col-md-12.image
-							img(src="img/slider-item1.jpeg").img-fluid
-						.col-md-12.text.dark-text
-							h4.bold Lorem ipsum dolor sit.
-							span.thin Nobis dolore officia esse natus dolorem eius perferendis ut expedita quibusdam debitis, aliquid corrupti repudiandae rem voluptates molestiae cumque officiis quas accusamus.
+						.col-md-12.text
+							h1.bold LOREMP IPSUM DOLOR
+							p.thin Nobis dolore officia esse natus dolorem eius perferendis ut expedita quibusdam debitis, aliquid corrupti repudiandae rem voluptates molestiae cumque officiis quas accusamus.
+							button.btn.btn-primary Read Me 
+							button.btn.btn-secondary.btn-outline-secondary Contact Me 
 		// Carousel Navigation
 		a.carousel-control-prev(href="#carousel-home" role="button" data-slide="prev")
 			.carousel-control-prev-icon(aria-hidden="true")
@@ -44,7 +44,7 @@ block content
 					.blog-list
 						.blog-item
 							.image
-								img.img-fluid(src="img/blog-post-2.jpg" alt="Blog Post")
+								img.img-fluid(src="img/blog-post-3.jpg" alt="Blog Post")
 							.content
 								h2 This is a post
 								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure voluptas vero aperiam mollitia voluptatibus, accusamus tempora ad voluptatem minus ullam eaque beatae natus deserunt assumenda debitis, perspiciatis, praesentium ipsa nihil!
@@ -69,6 +69,29 @@ block content
 						.blog-item
 							.image
 								img.img-fluid(src="img/blog-post-1.jpg" alt="Blog Post")
+							.content
+								h2 This is another post
+								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure voluptas vero aperiam mollitia voluptatibus, accusamus tempora ad voluptatem minus ullam eaque beatae natus deserunt assumenda debitis, perspiciatis, praesentium ipsa nihil!
+								a(href="#") Read more...
+								.share
+									ul
+										li 
+											span Share
+										li 
+											a
+												i.fab.fa-facebook
+										li
+											a
+												i.fab.fa-instagram
+										li
+											a
+												i.fab.fa-google-plus-square
+										li
+											a
+												i.fab.fa-twitter-square
+						.blog-item
+							.image
+								img.img-fluid(src="img/blog-post-4.jpg" alt="Blog Post")
 							.content
 								h2 This is another post
 								p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure voluptas vero aperiam mollitia voluptatibus, accusamus tempora ad voluptatem minus ullam eaque beatae natus deserunt assumenda debitis, perspiciatis, praesentium ipsa nihil!

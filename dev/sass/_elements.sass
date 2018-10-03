@@ -17,15 +17,11 @@
         left: 0
         z-index: 9980
         color: #fff
-        font-family: $font1
+        font-family: $font2
         max-height: 100%
         @include flex-center
         .row
             max-width: 600px
-            .image
-                margin-bottom: 20px
-                img
-                    @include box-shadow-soft()
     .carousel-item
         min-height: 300px
         height: 100vh
@@ -191,7 +187,7 @@
     .owl-item
         padding: 10px
     .item
-        @include box-shadow-btn()
+        @include box-shadow-container()
         background: #fff
         padding: 0
         .content
@@ -351,14 +347,14 @@ hr
     padding: 4px 9px
     position: fixed
     right: 26px
-    bottom: 90px
-    border: 1px solid #fff
-    background-color: $color1
+    bottom: 38px
+    background-color: rgba($color1,.5)
     width: 40px
     height: 40px
     color: #fff
     font-size: 2rem
     z-index: 9997
+    @include box-shadow-container()
     &:hover,&:active,&:focus
         color: #fff
         cursor: pointer
