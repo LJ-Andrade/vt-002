@@ -1,32 +1,115 @@
-//- Side Menu
-.padding-top-3x.hidden-md-up.docs-sidebar
-    nav.list-group
-        //- Links Array = ['Url', 'Link Name']
-        -
-            var links = [
-                ['alerts.html', 'Alerts'],
-                ['badges.html', 'Badges'],
-                ['breadcrums.html', 'Breadcrums'],
-                ['buttons.html', 'Buttons'],
-                ['buttons-group.html', 'Buttons Group'],
-                ['cards.html', 'Cards'],
-                ['carousel.html', 'Carousel'],
-                ['collapse.html', 'Collapse'],
-                ['dropdown.html', 'Dropdown'],
-                ['layout.html', 'Layout'],
-                ['forms.html', 'Forms'],
-                ['input-group.html', 'Input Group'],
-                ['icons.html', 'Icons'],
-                ['list-group.html', 'List Group'],
-                ['modal.html', 'Modal'],
-                ['navs.html', 'Navs'],
-                ['navigation.html', 'Navigation'],
-                ['progress.html', 'Progress'],
-                ['jumbotron.html', 'Jumbotron'],
-                ['pop-over.html', 'Pop Over'],
-                ['tables.html', 'Tables'],
-            ];
-        //- Render Links
-        each link in links
-            a.list-group-item.list-group-item-action(class={active: currentUrl === link[0]} href=link[0]) #{link[1]}
-            
+.sidebar
+    // AboutMe Widget
+    .sidebar-widget
+        h4 About me
+        hr
+        img(src="img/about-me.jpg" class="round-image-small" alt="About me")
+        p.text-justify
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, repudiandae sunt quos dicta repellendus iusto 
+            | quasi possimus nostrum provident obcaecati hic eius aut iste harum amet delectus accusantium placeat vero.
+    // Social Widget
+    .sidebar-widget
+        h4 Follow Me
+        hr
+        .social
+            .row.inner
+                .col
+                    a(href="#")
+                        i.facebook.fab.fa-facebook-f
+                    span
+                        | 150
+                        br
+                        | Likes
+                        
+                .col
+                    a(href="#")
+                        i.twitter.fab.fa-twitter
+                    span
+                        | 343
+                        br
+                        | Followers
+            .row.inner
+                .col
+                    a(href="#")
+                        i.instagram.fab.fa-instagram
+                    span
+                        | 195
+                        br
+                        | Followers
+                .col
+                    a(href="#")
+                        i.rss.fas.fa-rss
+                    span
+                        | 580
+                        br
+                        | Subscribers
+    // Categories Widget
+    .sidebar-widget
+        h4 Categories
+        hr
+        ul.list
+            li 
+                a(href="#") Travel
+                    .detail (5)
+            li 
+                a(href="#") Food
+                    .detail (15)
+            li 
+                a(href="#") Lakes
+                    .detail (1)
+            li 
+                a(href="#") Mountains
+                    .detail (6)
+            li 
+                a(href="#") Partners
+                    .detail (8)
+    // Tags Widget
+    .sidebar-widget.tags
+        h4 Tags
+        hr
+        ul.horizontal-list
+            li 
+                a(href="#") Lorem 
+            li 
+                a(href="#") ipsum 
+            li 
+                a(href="#") dolor 
+            li 
+                a(href="#") sit 
+            li 
+                a(href="#") amet 
+            li 
+                a(href="#") consectetur 
+            li 
+                a(href="#") dipisicing 
+            li 
+                a(href="#") elit 
+            li 
+                a(href="#") Quod
+    // Newsletter Widget
+    .sidebar-widget
+        h4 Newsletter Signup
+        hr
+        form.input-group.mb-3
+            input.form-control.line-input(type='text' placeholder='Enter Email Address' aria-label='Enter Email Address')
+            .input-group-append
+                button.input-group-text(type='submit') Subscribe
+    // Newsletter Widget
+    .sidebar-widget.polls
+        h4 Polls
+        hr
+        .content
+            .subtitle What do you thing about this?
+            form
+                .form-check
+                    input#exampleRadios1.form-check-input(type="radio" name="exampleRadios" value="option1" checked="")
+                    label.form-check-label(for="exampleRadios1")
+                        | It's Good !
+                .form-check
+                    input#exampleRadios2.form-check-input(type="radio" name="exampleRadios" value="option2")
+                    label.form-check-label(for="exampleRadios2")
+                        | Don't know...
+                .form-check.disabled
+                    input#exampleRadios3.form-check-input(type="radio" name="exampleRadios" value="option3" disabled="")
+                    label.form-check-label(for="exampleRadios3")
+                        | It's Bad !

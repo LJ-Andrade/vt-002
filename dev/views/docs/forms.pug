@@ -8,7 +8,7 @@ block content
 					.row
 						.col-lg-2.col-sm-3.pull-lg-9.pull-md-8
 							//- SIDEBAR
-							include ../includes/sidebar.pug
+							include ../includes/docs-sidebar.pug
 						.col-lg-10.col-sm-9.push-lg-3.push-md-4.theme-docs.code-no-bs
 							h1 Bootstrap 4 components
 							hr
@@ -16,258 +16,183 @@ block content
 							h4 Form
 								small 
 									a(href='https://getbootstrap.com/docs/4.1/components/forms/' target='_blank') (Official docs)
-							p Form Controls
-							
 							.panel
 								.panel-body
 									form
+										.form-row
+											.form-group.col-md-6
+												label(for='inputEmail4') Email
+												input#inputEmail4.form-control(type='email', placeholder='Email')
+											.form-group.col-md-6
+												label(for='inputPassword4') Password
+												input#inputPassword4.form-control(type='password', placeholder='Password')
 										.form-group
-											label(for='exampleInputEmail1') Email address
-											input#exampleInputEmail1.form-control(type='email', aria-describedby='emailHelp', placeholder='Enter email')
-											small#emailHelp.form-text.text-muted We'll never share your email with anyone else.
+											label(for='inputAddress') Address
+											input#inputAddress.form-control(type='text', placeholder='1234 Main St')
 										.form-group
-											label(for='exampleInputPassword1') Password
-											input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+											label(for='inputAddress2') Address 2
+											input#inputAddress2.form-control(type='text', placeholder='Apartment, studio, or floor')
+										.form-row
+											.form-group.col-md-6
+												label(for='inputCity') City
+												input#inputCity.form-control(type='text')
+											.form-group.col-md-4
+												label(for='inputState') State
+												select#inputState.form-control
+													option(selected='') Choose...
+													option ...
+											.form-group.col-md-2
+												label(for='inputZip') Zip
+												input#inputZip.form-control(type='text')
 										.form-group
-											label(for='exampleSelect1') Example select
-											select#exampleSelect1.form-control
+											.form-check
+												input#gridCheck.form-check-input(type='checkbox')
+												label.form-check-label(for='gridCheck')
+													| Check me out
+										.form-group
+											label(for='exampleFormControlTextarea1') Example textarea
+											textarea#exampleFormControlTextarea1.form-control(rows='3')
+										.form-group
+											label(for='exampleFormControlSelect1') Example select
+											select#exampleFormControlSelect1.form-control
 												option 1
 												option 2
 												option 3
 												option 4
 												option 5
-										.form-group
-											label(for='exampleSelect2') Example multiple select
-											select#exampleSelect2.form-control(multiple='')
-												option 1
-												option 2
-												option 3
-												option 4
-												option 5
-										.form-group
-											label(for='exampleTextarea') Example textarea
-											textarea#exampleTextarea.form-control(rows='3')
-										.form-group
-											label(for='exampleInputFile') File input
-											input#exampleInputFile.form-control-file(type='file', aria-describedby='fileHelp')
-											small#fileHelp.form-text.text-muted
-												| This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.
-										fieldset.form-group
-											legend Radio buttons
-											.form-check
-												input#exampleRadios1.form-check-input(type='radio', name='exampleRadios', value='option1', checked='')
-												label.form-check-label(for='exampleRadios1')
-													| Default radio
-											.form-check
-												input#exampleRadios2.form-check-input(type='radio', name='exampleRadios', value='option2')
-												label.form-check-label(for='exampleRadios2')
-													| Second default radio
-											.form-check.disabled
-												input#exampleRadios3.form-check-input(type='radio', name='exampleRadios', value='option3', disabled='')
-												label.form-check-label(for='exampleRadios3')
-													| Disabled radio
-										.form-check
-											label.form-check-label
-												input.form-check-input(type='checkbox')
-												|                     Check me out
-										button.btn.btn-primary.mt-3(type='submit') Submit
+										button.btn.btn-primary(type='submit') Sign in
+		
 								.panel-footer
 									pre
-										code.html.hljs.xml
-											
-											|  <span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"exampleInputEmail1"</span>&gt;</span>Email address<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"email"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exampleInputEmail1"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"emailHelp"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Enter email"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"emailHelp"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-text text-muted"</span>&gt;</span>We'll never share your email with anyone else.<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"exampleInputPassword1"</span>&gt;</span>Password<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exampleInputPassword1"</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">"Password"</span>&gt;</span>
-											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"exampleSelect1"</span>&gt;</span>Example select<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exampleSelect1"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"exampleSelect2"</span>&gt;</span>Example multiple select<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">multiple</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exampleSelect2"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>4<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>5<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"exampleTextarea"</span>&gt;</span>Example textarea<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">textarea</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exampleTextarea"</span> <span class="hljs-attr">rows</span>=<span class="hljs-string">"3"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">textarea</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"exampleInputFile"</span>&gt;</span>File input<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"file"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control-file"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"exampleInputFile"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"fileHelp"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"fileHelp"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-text text-muted"</span>&gt;</span>This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Radio buttons<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-check"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-check-label"</span>&gt;</span>
-											|      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-check-input"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"optionsRadios"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"optionsRadios1"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"option1"</span> <span class="hljs-attr">checked</span>&gt;</span>
-											|      Option one is this and that—be sure to include why it's great
-											|    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-check"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-check-label"</span>&gt;</span>
-											|      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-check-input"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"optionsRadios"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"optionsRadios2"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"option2"</span>&gt;</span>
-											|      Option two can be something else and selecting it will deselect option one
-											|    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-check disabled"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-check-label"</span>&gt;</span>
-											|      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-check-input"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"optionsRadios"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"optionsRadios3"</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"option3"</span> <span class="hljs-attr">disabled</span>&gt;</span>
-											|      Option three is disabled
-											|    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-check"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-check-label"</span>&gt;</span>
-											|    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-check-input"</span>&gt;</span>
-											|    Check me out
-											|    <span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"btn btn-primary"</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-											|  <span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code>
-
-							br
-							h4.mt-3
-								| Form states
-							.panel
+										code.html
+											| &lt;form&gt;
+											|   &lt;div class=&quot;form-row&quot;&gt;
+											|     &lt;div class=&quot;form-group col-md-6&quot;&gt;
+											|       &lt;label for=&quot;inputEmail4&quot;&gt;Email&lt;/label&gt;
+											|       &lt;input type=&quot;email&quot; class=&quot;form-control&quot; id=&quot;inputEmail4&quot; placeholder=&quot;Email&quot;&gt;
+											|     &lt;/div&gt;
+											|     &lt;div class=&quot;form-group col-md-6&quot;&gt;
+											|       &lt;label for=&quot;inputPassword4&quot;&gt;Password&lt;/label&gt;
+											|       &lt;input type=&quot;password&quot; class=&quot;form-control&quot; id=&quot;inputPassword4&quot; placeholder=&quot;Password&quot;&gt;
+											|     &lt;/div&gt;
+											|   &lt;/div&gt;
+											|   &lt;div class=&quot;form-group&quot;&gt;
+											|     &lt;label for=&quot;inputAddress&quot;&gt;Address&lt;/label&gt;
+											|     &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputAddress&quot; placeholder=&quot;1234 Main St&quot;&gt;
+											|   &lt;/div&gt;
+											|   &lt;div class=&quot;form-group&quot;&gt;
+											|     &lt;label for=&quot;inputAddress2&quot;&gt;Address 2&lt;/label&gt;
+											|     &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputAddress2&quot; placeholder=&quot;Apartment, studio, or floor&quot;&gt;
+											|   &lt;/div&gt;
+											|   &lt;div class=&quot;form-row&quot;&gt;
+											|     &lt;div class=&quot;form-group col-md-6&quot;&gt;
+											|       &lt;label for=&quot;inputCity&quot;&gt;City&lt;/label&gt;
+											|       &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputCity&quot;&gt;
+											|     &lt;/div&gt;
+											|     &lt;div class=&quot;form-group col-md-4&quot;&gt;
+											|       &lt;label for=&quot;inputState&quot;&gt;State&lt;/label&gt;
+											|       &lt;select id=&quot;inputState&quot; class=&quot;form-control&quot;&gt;
+											|         &lt;option selected&gt;Choose...&lt;/option&gt;
+											|         &lt;option&gt;...&lt;/option&gt;
+											|       &lt;/select&gt;
+											|     &lt;/div&gt;
+											|     &lt;div class=&quot;form-group col-md-2&quot;&gt;
+											|       &lt;label for=&quot;inputZip&quot;&gt;Zip&lt;/label&gt;
+											|       &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;inputZip&quot;&gt;
+											|     &lt;/div&gt;
+											|   &lt;/div&gt;
+											|   &lt;div class=&quot;form-group&quot;&gt;
+											|     &lt;div class=&quot;form-check&quot;&gt;
+											|       &lt;input class=&quot;form-check-input&quot; type=&quot;checkbox&quot; id=&quot;gridCheck&quot;&gt;
+											|       &lt;label class=&quot;form-check-label&quot; for=&quot;gridCheck&quot;&gt;
+											|         Check me out
+											|       &lt;/label&gt;
+											|     &lt;/div&gt;
+											|   &lt;/div&gt;
+											| 
+											| &lt;div class=&quot;form-group&quot;&gt;
+											|     &lt;label for=&quot;exampleFormControlTextarea1&quot;&gt;Example textarea&lt;/label&gt;
+											|     &lt;textarea class=&quot;form-control&quot; id=&quot;exampleFormControlTextarea1&quot; rows=&quot;3&quot;&gt;&lt;/textarea&gt;
+											|   &lt;/div&gt;
+											| 
+											|  &lt;div class=&quot;form-group&quot;&gt;
+											|     &lt;label for=&quot;exampleFormControlSelect1&quot;&gt;Example select&lt;/label&gt;
+											|     &lt;select class=&quot;form-control&quot; id=&quot;exampleFormControlSelect1&quot;&gt;
+											|       &lt;option&gt;1&lt;/option&gt;
+											|       &lt;option&gt;2&lt;/option&gt;
+											|       &lt;option&gt;3&lt;/option&gt;
+											|       &lt;option&gt;4&lt;/option&gt;
+											|       &lt;option&gt;5&lt;/option&gt;
+											|     &lt;/select&gt;
+											|   &lt;/div&gt;
+											| &lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;Sign in&lt;/button&gt;
+											| &lt;/form&gt;
+								br
+								h4 File Uploading
+									small 
 								.panel-body
-									.form-group.has-success
-										label.form-control-label(for='inputSuccess1') Input with success
-										input#inputSuccess1.form-control.is-valid(type='text')
-										small.form-text.text-muted Example help text that remains unchanged.
-									.form-group.has-warning
-										label.form-control-label(for='inputWarning1') Input with error
-										input#inputWarning1.form-control.is-invalid(type='text')
-										.invalid-feedback Shucks, check the formatting of that and try again.
-										small.form-text.text-muted Example help text that remains unchanged.
-									.form-group.has-danger
-										label.form-control-label(for='inputDanger1') Input with error
-										input#inputDanger1.form-control.is-invalid(type='text')
-										.invalid-feedback Sorry, that username's taken. Try another?
-										small.form-text.text-muted Example help text that remains unchanged.
+									.custom-file
+										input#customFileLang.custom-file-input(type='file', lang='es')
+										label.custom-file-label(for='customFileLang') Seleccionar Archivo
+
 								.panel-footer
 									pre
-										code.html.hljs.xml
-											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group has-success"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputSuccess1"</span>&gt;</span>Input with success<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control is-valid"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputSuccess1"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-text text-muted"</span>&gt;</span>Example help text that remains unchanged.<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
-											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											br
-											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group has-warning"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputWarning1"</span>&gt;</span>Input with error<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control is-invalid"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputWarning1"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"invalid-feedback"</span>&gt;</span>Shucks, check the formatting of that and try again.<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-text text-muted"</span>&gt;</span>Example help text that remains unchanged.<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
-											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											br
-											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-group has-danger"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"inputDanger1"</span>&gt;</span>Input with error<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-control is-invalid"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"inputDanger1"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"invalid-feedback"</span>&gt;</span>Sorry, that username's taken. Try another?<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">small</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"form-text text-muted"</span>&gt;</span>Example help text that remains unchanged.<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
-											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code>
-							br
-							h4.mt-3
-								| Custom forms
-							.panel
+										code.html
+											| &lt;div class=&quot;custom-file&quot;&gt;
+											|   &lt;input type=&quot;file&quot; class=&quot;custom-file-input&quot; id=&quot;customFileLang&quot; lang=&quot;es&quot;&gt;
+											|   &lt;label class=&quot;custom-file-label&quot; for=&quot;customFileLang&quot;&gt;Seleccionar Archivo&lt;/label&gt;
+											| &lt;/div&gt;
+								br
+								h4 Custom checkbox
 								.panel-body
 									.custom-control.custom-checkbox
 										input#customCheck1.custom-control-input(type='checkbox')
 										label.custom-control-label(for='customCheck1') Check this custom checkbox
-									.custom-control.custom-checkbox
-										input#customCheck2.custom-control-input(type='checkbox')
-										label.custom-control-label(for='customCheck2') Check this custom checkbox
-									.custom-control.custom-checkbox
-										input#customCheck3.custom-control-input(type='checkbox')
-										label.custom-control-label(for='customCheck3') Check this custom checkbox
-									.custom-control.custom-radio.mt-3
-										input#customRadio1.custom-control-input(type='radio', name='customRadio')
-										label.custom-control-label(for='customRadio1') Toggle this custom radio
-									.custom-control.custom-radio.mb-4
-										input#customRadio2.custom-control-input(type='radio', name='customRadio')
-										label.custom-control-label(for='customRadio2') Or toggle this other custom radio
-									label(for='customRange1') Example range
-									input#customRange1.custom-range(type='range')
-									p.mt-3 File browser
-									.custom-file
-										input#customFile.custom-file-input(type='file')
-										label.custom-file-label(for='customFile') Choose file
-									p.mt-4 Dropdown menus
-									select.custom-select
-										option(selected='') Open this select menu
-										option(value='1') One
-										option(value='2') Two
-										option(value='3') Three
-									br
-									select.spacial-select.mt-3
-										option(selected='') Open this select menu
-										option(value='1') One
-										option(value='2') Two
-										option(value='3') Three
+
 								.panel-footer
 									pre
-										code.html.hljs.xml
-											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control custom-checkbox"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"customCheck1"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"customCheck1"</span>&gt;</span>Check this custom checkbox<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control custom-checkbox"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"customCheck1"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"customCheck1"</span>&gt;</span>Check this custom checkbox<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control custom-checkbox"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"customCheck1"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"customCheck1"</span>&gt;</span>Check this custom checkbox<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											| 
-											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control custom-radio mt-3"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"customRadio1"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"customRadio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control-input"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"customRadio1"</span>&gt;</span>Toggle this custom radio<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control custom-radio mb-4"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"radio"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"customRadio2"</span> <span class="hljs-attr">name</span>=<span class="hljs-string">"customRadio"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control-input"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-control-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"customRadio2"</span>&gt;</span>Or toggle this other custom radio<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											| 
-											| <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"customRange1"</span>&gt;</span>Example range<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											| <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"range"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-range"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"customRange1"</span>&gt;</span>
-											| 
-											| <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-3"</span>&gt;</span>File browser<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-											| <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-file"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"file"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-file-input"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"customFile"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-file-label"</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"customFile"</span>&gt;</span>Choose file<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-											| <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-											| 
-											| <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"mt-4"</span>&gt;</span>Dropdown menus<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-											| <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"custom-select"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">selected</span>&gt;</span>Open this select menu<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>One<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span>&gt;</span>Two<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"3"</span>&gt;</span>Three<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											| <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
-											| 
-											| <span class="hljs-tag">&lt;<span class="hljs-name">select</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"spacial-select mt-3"</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">selected</span>&gt;</span>Open this select menu<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"1"</span>&gt;</span>One<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"2"</span>&gt;</span>Two<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											|   <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">value</span>=<span class="hljs-string">"3"</span>&gt;</span>Three<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-											| <span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span>
+										code.html
+											| &lt;div class=&quot;custom-control custom-checkbox&quot;&gt;
+											|   &lt;input type=&quot;checkbox&quot; class=&quot;custom-control-input&quot; id=&quot;customCheck1&quot;&gt;
+											|   &lt;label class=&quot;custom-control-label&quot; for=&quot;customCheck1&quot;&gt;Check this custom checkbox&lt;/label&gt;
+											| &lt;/div&gt;
+								br
+								h4 Custom radio
+								.panel-body
+									.custom-control.custom-radio
+										input#customRadio1.custom-control-input(type='radio', name='customRadio')
+										label.custom-control-label(for='customRadio1') Toggle this custom radio
+									.custom-control.custom-radio
+										input#customRadio2.custom-control-input(type='radio', name='customRadio')
+										label.custom-control-label(for='customRadio2') Or toggle this other custom radio
+
+								.panel-footer
+									pre
+										code.html
+											| &lt;div class=&quot;custom-control custom-radio&quot;&gt;
+											|   &lt;input type=&quot;radio&quot; id=&quot;customRadio1&quot; name=&quot;customRadio&quot; class=&quot;custom-control-input&quot;&gt;
+											|   &lt;label class=&quot;custom-control-label&quot; for=&quot;customRadio1&quot;&gt;Toggle this custom radio&lt;/label&gt;
+											| &lt;/div&gt;
+											| &lt;div class=&quot;custom-control custom-radio&quot;&gt;
+											|  	&lt;input type=&quot;radio&quot; id=&quot;customRadio2&quot; name=&quot;customRadio&quot; class=&quot;custom-control-input&quot;&gt;
+											|   &lt;label class=&quot;custom-control-label&quot; for=&quot;customRadio2&quot;&gt;Or toggle this other custom radio&lt;/label&gt;
+											| &lt;/div&gt;
+								br
+								h4 Input Groups
+								.panel-body
+									.col-md-6
+										form.input-group
+											input.form-control.line-input(type='text' placeholder='Enter Email Address' aria-label='Enter Email Address')
+											.input-group-append
+												button.input-group-text(type='submit') Subscribe
+								.panel-footer
+									pre
+										code.html
+											| &lt;form class=&quot;input-group&quot;&gt;
+											|  &lt;input class=&quot;form-control line-input&quot; type=&quot;text&quot; placeholder=&quot;Enter Email Address&quot; aria-label=&quot;Enter Email Address&quot;&gt;
+											|   &lt;div class=&quot;input-group-append&quot;&gt;
+											|    &lt;button class=&quot;input-group-text&quot; type=&quot;submit&quot;&gt;Subscribe&lt;/button&gt;
+											|   &lt;/div&gt;
+											|&lt;/form&gt;
+
+

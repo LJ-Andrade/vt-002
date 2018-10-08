@@ -24,38 +24,6 @@ html(lang="en")
 	body
 		// Page navigation
 		include navigation
-		// Theme Options
-		#theme-options.theme-options
-			.open-icon(onclick="themeOptions('open')")
-				i.fa.fa-cog
-			.content
-				.close(onclick="themeOptions('close')")
-					i.fa.fa-times
-				.item
-					.sub-title Skin Color
-					ul.color
-						li.skin-switcher.theme-dark(data-theme="dark-theme.css")
-							.checked
-								i.fa.fa-check
-						li.skin-switcher.theme-light(data-theme="light-theme.css")
-							.checked.true
-								i.fa.fa-check
-				.item
-					.sub-title Navigation
-					form.form-small
-						.form-group
-							select#exampleFormControlSelect2.form-control
-								option(onClick="styleManager({nav: 'nav-top'})") NavBar Top
-								option(onClick="styleManager({nav: 'nav-fixed'})") NavBar Fixed Top
-								option(onClick="styleManager({nav: 'navfull'})") Full Screen
-				.item#nav-button-position
-					.sub-title Nav Button Position
-					form.form-small
-						.form-group
-							select#exampleFormControlSelect2.form-control
-								option(selected onClick="styleManager({nav: 'navfull', navButton: 'navfull-top-btn'})") Top
-								option(onClick="styleManager({nav: 'navfull', navButton: 'navfull-bottom-btn'})") Bottom
-
 		// Content
 		block content
 		// Go to top link

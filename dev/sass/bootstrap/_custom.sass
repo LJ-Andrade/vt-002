@@ -5,8 +5,30 @@
 
 // Alerts
 //-------------------------------------------------
-
-
+.alert-primary
+	background-color: rgba($primary,.5)
+	color: #fff
+.alert-secondary
+	background-color: rgba($secondary,.5)
+	color: #fff
+.alert-success
+	background-color: rgba($success,.5)
+	color: #000
+.alert-danger
+	background-color: rgba($danger,.5)
+	color: #fff
+.alert-warning
+	background-color: rgba($warning,.5)
+	color: #000
+.alert-info
+	background-color: rgba($info,.5)
+	color: #000
+.alert-light
+	background-color: rgba($primary,.1)
+	color: #000
+.alert-dark
+	background-color: $primary
+	color: #fff
 // Cards
 //-------------------------------------------------
 
@@ -14,11 +36,13 @@
 // Buttons
 //-------------------------------------------------
 .btn
-    border-radius: 50px
+	border-radius: 50px
+	margin-bottom: 5px
 
 // Badges -
 //-------------------------------------------------
-
+.badge
+	margin-right: 3px
 
 // Forms
 //-------------------------------------------------
@@ -36,6 +60,20 @@
 		font-size: .8rem
 		padding: 4px 5px
 
+.input-group
+	.line-input
+		border-radius: 0
+	.input-group-text
+		background-color: #f9f9f9
+		border-radius: 0
+
+.custom-file-input
+	input,
+	label
+		&:after
+			border-radius: 0 !important
+
+
 // Placeholder
 //-------------------------------------------------
 $placeholder: #383838
@@ -52,4 +90,10 @@ $placeholder: #383838
 
 // Breadcrum
 //-------------------------------------------------
-
+.breadcrumb
+	padding: 0
+	padding-left: 10px
+	background-color: transparent
+	font-size: 0.9rem
+	.breadcrumb-item
+		padding: 5px

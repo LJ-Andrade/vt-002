@@ -262,9 +262,8 @@ $('.skin-switcher').click(function(){
 });
 
 
-function styleManager(options){
+window.styleManager = function(options){
     // Theme Default Settings
-    console.log("OK");
     var settings = $.extend({
             nav: 'nav-fixed',
             navButton: 'navfull-top-btn',
@@ -287,9 +286,16 @@ function styleManager(options){
         $('.site-fixed-brand').addClass('Hidden');
         $('#nav-button-position').hide();
         $('.site-fixed-brand').hide();
+        $('#go-to-top').removeClass('avoid-nav');
     } else {
         $('#nav-button-position').show();
         $('.site-fixed-brand').show();
+        if(settings.navButton == 'navfull-bottom-btn')
+        {
+            $('#go-to-top').addClass('avoid-nav');
+        } else {
+            $('#go-to-top').removeClass('avoid-nav');
+        }
     }
 };
 

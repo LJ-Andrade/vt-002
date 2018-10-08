@@ -27,7 +27,7 @@
     <!-- ===========================-->
     <!-- Navigation Fixed Top NabVar-->
     <!-- ===========================-->
-    <nav class="main-navigation navbar fixed-top navbar-expand-lg navbar-light Hidden" id="nav-fixed"><a class="navbar-brand" href="index.html"> 
+    <nav class="main-navigation navbar fixed-top navbar-expand-lg navbar-light Hidden" id="nav-fixed"><a class="navbar-brand" href="/"> 
         <div class="site-brand"><span class="bold">Tell </span><span class="thin dark-text">Something</span></div></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-fixed-top" aria-controls="navbar-fixed-top" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbar-fixed-top">
@@ -94,47 +94,6 @@
     </nav>
     <!-- Site Brand (Full Screen Navigation)-->
     <div class="site-fixed-brand centered-brand"><span class="bold">Tell </span><span class="thin"> Something</span></div>
-    <!-- Theme Options-->
-    <div class="theme-options" id="theme-options">
-      <div class="open-icon" onclick="themeOptions('open')"><i class="fa fa-cog"></i></div>
-      <div class="content">
-        <div class="close" onclick="themeOptions('close')"><i class="fa fa-times"></i></div>
-        <div class="item">
-          <div class="sub-title">Skin Color</div>
-          <ul class="color">
-            <li class="skin-switcher theme-dark" data-theme="dark-theme.css">
-              <div class="checked"><i class="fa fa-check"></i></div>
-            </li>
-            <li class="skin-switcher theme-light" data-theme="light-theme.css">
-              <div class="checked true"><i class="fa fa-check"></i></div>
-            </li>
-          </ul>
-        </div>
-        <div class="item">
-          <div class="sub-title">Navigation</div>
-          <form class="form-small">
-            <div class="form-group">
-              <select class="form-control" id="exampleFormControlSelect2">
-                <option onClick="styleManager({nav: 'nav-top'})">NavBar Top</option>
-                <option onClick="styleManager({nav: 'nav-fixed'})">NavBar Fixed Top</option>
-                <option onClick="styleManager({nav: 'navfull'})">Full Screen</option>
-              </select>
-            </div>
-          </form>
-        </div>
-        <div class="item" id="nav-button-position">
-          <div class="sub-title">Nav Button Position</div>
-          <form class="form-small">
-            <div class="form-group">
-              <select class="form-control" id="exampleFormControlSelect2">
-                <option selected="selected" onClick="styleManager({nav: 'navfull', navButton: 'navfull-top-btn'})">Top</option>
-                <option onClick="styleManager({nav: 'navfull', navButton: 'navfull-bottom-btn'})">Bottom</option>
-              </select>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
     <!-- Content-->
     <!-- ==================-->
     <!--    PAGE CONTENT   -->
@@ -210,20 +169,18 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="blog-sidebar">
+            <div class="sidebar">
               <!-- AboutMe Widget-->
-              <div class="blog-widget">
+              <div class="sidebar-widget">
                 <h4>About me</h4>
-                <div class="about-me">
-                  <hr/><img src="img/about-me.jpg" alt="About me"/>
-                  <p>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, repudiandae sunt quos dicta repellendus iusto 
-                    quasi possimus nostrum provident obcaecati hic eius aut iste harum amet delectus accusantium placeat vero.
-                  </p>
-                </div>
+                <hr/><img class="round-image-small" src="img/about-me.jpg" alt="About me"/>
+                <p class="text-justify">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, repudiandae sunt quos dicta repellendus iusto 
+                  quasi possimus nostrum provident obcaecati hic eius aut iste harum amet delectus accusantium placeat vero.
+                </p>
               </div>
               <!-- Social Widget-->
-              <div class="blog-widget">
+              <div class="sidebar-widget">
                 <h4>Follow Me</h4>
                 <hr/>
                 <div class="social">
@@ -238,7 +195,7 @@
                 </div>
               </div>
               <!-- Categories Widget-->
-              <div class="blog-widget">
+              <div class="sidebar-widget">
                 <h4>Categories</h4>
                 <hr/>
                 <ul class="list">
@@ -255,7 +212,7 @@
                 </ul>
               </div>
               <!-- Tags Widget-->
-              <div class="blog-widget tags">
+              <div class="sidebar-widget tags">
                 <h4>Tags</h4>
                 <hr/>
                 <ul class="horizontal-list">
@@ -271,7 +228,7 @@
                 </ul>
               </div>
               <!-- Newsletter Widget-->
-              <div class="blog-widget">
+              <div class="sidebar-widget">
                 <h4>Newsletter Signup</h4>
                 <hr/>
                 <form class="input-group mb-3">
@@ -282,7 +239,7 @@
                 </form>
               </div>
               <!-- Newsletter Widget-->
-              <div class="blog-widget polls">
+              <div class="sidebar-widget polls">
                 <h4>Polls</h4>
                 <hr/>
                 <div class="content">

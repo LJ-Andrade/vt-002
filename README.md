@@ -1,4 +1,4 @@
-# [BASE Theme](https://) WriteSomething
+# [BASE Theme](https://) Tell Something
 
 [**BASE Theme**](https://) intro text
 

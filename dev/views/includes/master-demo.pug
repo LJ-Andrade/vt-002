@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		meta(http-equiv="X-UA-Compatible" content="ie=edge")
+		title Tell Something | Theme
+		meta(name="keywords" content="keywords")
+		meta(name="description" content="Page author")
+		// Favicon
+		link(rel="icon" href="./img/favicon.png" type="image/png")
+		// Vendor Css
+		link(rel="stylesheet", href="./css/bootstrap.css")
+		link(rel="stylesheet", href="./vendor/owl-carousel/owl.carousel.min.css")
+		link(rel="stylesheet", href="./vendor/owl-carousel/owl.theme.default.min.css")
+		link(rel="stylesheet", href="./vendor/font-awesome/css/all.css")
+		link(rel="stylesheet", href="./vendor/magnific-popup/magnific-popup.css")
+		link(rel="stylesheet", href="./vendor/animate/animate.css")
+		// Theme Css
+		link(rel="stylesheet" href="./css/styles.css")
+		link(rel="stylesheet" id="theme-css" href="./css/light-theme.css") 
+		// Your Css
+		link(rel="stylesheet" href="./css/custom-styles.css") 
+	body
+		// Page navigation
+		include navigation
+		// Theme Options DEMO
+		#theme-options.theme-options
+			.open-icon(onclick="themeOptions('open')")
+				i.fa.fa-cog
+			.content
+				.close(onclick="themeOptions('close')")
+					i.fa.fa-times
+				.item
+					.sub-title Skin Color
+					ul.color
+						li.skin-switcher.theme-dark(data-theme="dark-theme.css")
+							.checked
+								i.fa.fa-check
+						li.skin-switcher.theme-light(data-theme="light-theme.css")
+							.checked.true
+								i.fa.fa-check
+				.item
+					.sub-title Navigation
+					form.form-small
+						.form-group
+							.form-check
+								input.form-check-input(type="radio" name="navbartop" value="" onclick="styleManager({nav: 'nav-fixed'});" checked)
+								label.form-check-label Navbar Fixed
+								br
+								input.form-check-input(type="radio" name="navbartop" value="" onclick="styleManager({nav: 'nav-top'});")
+								label.form-check-label Navbar Top 
+								br
+								input.form-check-input(type="radio" name="navbartop" value="" onclick="styleManager({nav: 'navfull'});")
+								label.form-check-label Full Screen Nav
+				.item#nav-button-position
+					.sub-title Nav Button Position
+					form.form-small
+						.form-group
+							.form-check
+								input.form-check-input(type="radio" name="navbartop" value="" onclick="styleManager({nav: 'navfull', navButton: 'navfull-top-btn'});" checked)
+								label.form-check-label Top 
+								br
+								input.form-check-input(type="radio" name="navbartop" value="" onclick="styleManager({nav: 'navfull', navButton: 'navfull-bottom-btn'});")
+								label.form-check-label Bottom
+								
+
+		// Content
+		block content
+		// Go to top link
+		#go-to-top
+			i.fas.fa-sort-up
+		// Scripts and html closing
+		include foot
+		

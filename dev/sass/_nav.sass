@@ -79,9 +79,10 @@
         width: 100%
         height: 8px
         border: 0
+        margin-bottom: 4px
         -webkit-transition: all .35s ease
         transition: all .35s ease
-        border-bottom: 1px solid #ccc
+        // border-bottom: 1px solid #ccc
         + .bar
             margin-top: 1px
     .middle
@@ -102,13 +103,14 @@
 .navfull-top-active
     .bar
         background-color: #fff
+        margin-bottom: 0
     .top
         -webkit-transform: translateY(6px) translateX(0) rotate(45deg)
     .middle
         opacity: 0
     .bottom
         -webkit-transform: translateY(-12px) translateX(0) rotate(-45deg)
-
+        margin-bottom: 0
 // Bottom Nav button
 .navfull-bottom-button
     bottom: 20px
@@ -168,7 +170,6 @@
 	background: transparent
 	padding: 0.2rem 1rem
 	font-size: 1rem
-    
 	a
 		color: #fff
 	.navbar-toggler
@@ -206,3 +207,19 @@
         font-size: 1.5rem
     a
         color: #383838
+
+@media (max-width: 991px)
+    .navbar-collapse
+        background: rgba(255, 255, 255, 0.45098039215686275)
+        padding: 20px
+        ul 
+            li 
+                @include transition(0.2s)
+                a
+                    color: #383838 !important
+                    font-size: 1.2rem
+                &:hover,&:active,&:focus
+                    background-color: #fff
+                    padding-left: 15px 
+        
+    

@@ -1,4 +1,5 @@
 @import mixins
+@import _variables
 @import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i|Montserrat:200,700,800,900')
 $font1: 'Crimson Text', serif
 $font2: 'Montserrat', sans-serif
@@ -50,151 +51,152 @@ $font2: 'Montserrat', sans-serif
 	.vertical-list
 		list-style-type: circle
 		padding-left: 40px 
-
+.docs-navbar
+	background-color: #fff
+	@include box-shadow-container
 .docs-sidebar
-	
 	a
 		font-family: $font2
 		padding: 4px 10px
 		font-size: .9rem
 
-.code-no-bs
-	font-size: 1rem
-	pre
-		padding: 10px
-		background-color: #f5f7f9
-		code
-			display: block
-			&.html
-				> *
-					color: #2f6f9f
-					line-height: 20px
+// .code-no-bs
+// 	font-size: 1rem
+// 	pre
+// 		padding: 10px
+// 		background-color: #f5f7f9
+// 		code
+// 			display: block
+// 			&.html
+// 				> *
+// 					color: #2f6f9f
+// 					line-height: 20px
 
-				[class*=hljs-tag]
-					color: #2f6f9f
+// 				[class*=hljs-tag]
+// 					color: #2f6f9f
 
-				[class*=hljs-name]
-					color: #2f6f9f
+// 				[class*=hljs-name]
+// 					color: #2f6f9f
 
-				[class*=hljs-attr]
-					color: #904242
+// 				[class*=hljs-attr]
+// 					color: #904242
 
-				[class*=hljs-string]
-					color: #8476d0
+// 				[class*=hljs-string]
+// 					color: #8476d0
 
-			&.css
-				color: #2f6f9f
-				> *
-					color: #2f6f9f
-					line-height: 20px
+// 			&.css
+// 				color: #2f6f9f
+// 				> *
+// 					color: #2f6f9f
+// 					line-height: 20px
 
-				[class*=hljs-keyword]
-					color: #069
+// 				[class*=hljs-keyword]
+// 					color: #069
 
-				[class*=hljs-number]
-					color: #f60
+// 				[class*=hljs-number]
+// 					color: #f60
 
-.code-custom
-	color: #2f6f9f
-	font-size: 0.8rem
+// .code-custom
+// 	color: #2f6f9f
+// 	font-size: 0.8rem
 
-.code-bs
-	font-size: 0.9rem
-	.hll
-		background-color: #ffc
-	.c
-		color: #999
-	.k
-		color: #069
-	.o
-		color: #555
-	.cm
-		color: #999
-	.cp
-		color: #099
-	.c1, .cs
-		color: #999
-	.gd
-		background-color: #fcc
-		border: 1px solid #c00
-	.ge
-		font-style: italic
-	.gr
-		color: #f00
-	.gh
-		color: #030
-	.gi
-		background-color: #cfc
-		border: 1px solid #0c0
-	.go
-		color: #aaa
-	.gp
-		color: #009
-	.gu
-		color: #030
-	.gt
-		color: #9c6
-	.kc, .kd, .kn, .kp, .kr
-		color: #069
-	.kt
-		color: #078
-	.m
-		color: #f60
-	.s
-		color: #8476d0
-	.na
-		color: #904242
-	.nb
-		color: #366
-	.nc
-		color: #0a8
-	.no
-		color: #360
-	.nd
-		color: #99f
-	.ni
-		color: #999
-	.ne
-		color: #c00
-	.nf
-		color: #c0f
-	.nl
-		color: #99f
-	.nn
-		color: #0cf
-	.nt
-		color: #2f6f9f
-	.nv
-		color: #033
-	.ow
-		color: #000
-	.w
-		color: #bbb
-	.mf, .mh, .mi, .mo
-		color: #f60
-	.sb, .sc
-		color: #c30
-	.sd
-		font-style: italic
-		color: #c30
-	.s2, .se, .sh
-		color: #c30
-	.si
-		color: #a00
-	.sx,.nx
-		color: #c30 !important
-	.sr
-		color: #3aa
-	.s1
-		color: #c30
-	.ss
-		color: #fc3
-	.bp
-		color: #366
-	.vc, .vg, .vi
-		color: #033
-	.il
-		color: #f60
+// .code-bs
+// 	font-size: 0.9rem
+// 	.hll
+// 		background-color: #ffc
+// 	.c
+// 		color: #999
+// 	.k
+// 		color: #069
+// 	.o
+// 		color: #555
+// 	.cm
+// 		color: #999
+// 	.cp
+// 		color: #099
+// 	.c1, .cs
+// 		color: #999
+// 	.gd
+// 		background-color: #fcc
+// 		border: 1px solid #c00
+// 	.ge
+// 		font-style: italic
+// 	.gr
+// 		color: #f00
+// 	.gh
+// 		color: #030
+// 	.gi
+// 		background-color: #cfc
+// 		border: 1px solid #0c0
+// 	.go
+// 		color: #aaa
+// 	.gp
+// 		color: #009
+// 	.gu
+// 		color: #030
+// 	.gt
+// 		color: #9c6
+// 	.kc, .kd, .kn, .kp, .kr
+// 		color: #069
+// 	.kt
+// 		color: #078
+// 	.m
+// 		color: #f60
+// 	.s
+// 		color: #8476d0
+// 	.na
+// 		color: #904242
+// 	.nb
+// 		color: #366
+// 	.nc
+// 		color: #0a8
+// 	.no
+// 		color: #360
+// 	.nd
+// 		color: #99f
+// 	.ni
+// 		color: #999
+// 	.ne
+// 		color: #c00
+// 	.nf
+// 		color: #c0f
+// 	.nl
+// 		color: #99f
+// 	.nn
+// 		color: #0cf
+// 	.nt
+// 		color: #2f6f9f
+// 	.nv
+// 		color: #033
+// 	.ow
+// 		color: #000
+// 	.w
+// 		color: #bbb
+// 	.mf, .mh, .mi, .mo
+// 		color: #f60
+// 	.sb, .sc
+// 		color: #c30
+// 	.sd
+// 		font-style: italic
+// 		color: #c30
+// 	.s2, .se, .sh
+// 		color: #c30
+// 	.si
+// 		color: #a00
+// 	.sx,.nx
+// 		color: #c30 !important
+// 	.sr
+// 		color: #3aa
+// 	.s1
+// 		color: #c30
+// 	.ss
+// 		color: #fc3
+// 	.bp
+// 		color: #366
+// 	.vc, .vg, .vi
+// 		color: #033
+// 	.il
+// 		color: #f60
 
 
 .bd-example-container

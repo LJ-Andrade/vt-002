@@ -2,12 +2,11 @@
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  background: #F0F0F0;
 }
 
 .hljs,
 .hljs-subst {
-  color: #444;
+  color: #c76464;
 }
 
 .hljs-comment {
@@ -31,7 +30,7 @@
 .hljs-quote,
 .hljs-template-tag,
 .hljs-deletion {
-  color: #880000;
+  color: #385dc2;
 }
 
 .hljs-title,
