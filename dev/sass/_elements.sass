@@ -33,7 +33,6 @@
 @media (max-width: 970px)
     .carousel-full .carousel-content
         padding: 0 90px
-        border: 1px solid red
 
 @media (max-width: 700px)
     .carousel-full .carousel-content
@@ -252,6 +251,10 @@
 .color-section-2
     background-color: $gray-200;
 
+.main-gradient
+    color: #fff
+    @include linear-gradient-4(290deg, $color1, $color1, $color2, $color3)
+
 // Text Banner
 .text-banner
     background-color: $gray-200
@@ -290,6 +293,38 @@
 // Forms
 //-------------------------------------------------
 
+// Login - Register
+//-------------------------------------------------
+.login-register-title
+    margin-bottom: 10px
+    text-align: center
+    span
+        color: #fff
+
+.login-register-box
+    background-color: rgba(#fff,.1)
+    border-radius: 5px
+    color: #fff
+    font-family: $font2
+    padding: 20px
+    min-width: 350px
+    text-align: center
+    box-shadow: 10px 12px 42px -9px #0000008c 
+    font-size: 1rem
+    margin-bottom: 20px
+    form
+        input
+            background-color: rgba(#fff,.4)
+            border: 0
+            color: #fff
+            margin-bottom: 5px
+
+.info-box
+    font-size: 1rem
+    text-align: center
+    color: #fff
+    .title
+        margin-bottom: 10px
 
 // Containers
 //-------------------------------------------------

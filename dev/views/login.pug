@@ -1,0 +1,17 @@
+extends includes/master.pug
+block content
+    .main-content.flex-center.login-register
+        section
+            .login-register-title
+                span Sign In
+            .login-register-box
+                form
+                    .form-group
+                        input.form-control(type="email" placeholder="Email")
+                    .form-group
+                        input.form-control(type="password" placeholder="Password")
+                    a.btn.btn-primary.btn-block(href="") Submit
+                    a.btn.btn-secondary.btn-block(href="") Forgot Password?
+            .info-box
+                .title Don't you have an Account?
+                a.btn.btn-secondary(href="register.html") Create Account Now

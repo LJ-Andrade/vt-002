@@ -230,6 +230,17 @@ $(function () {
     });
 });
 
+// Fixed NavBar large-dropdown scroll
+// if ($(window).width() < 585) {
+//     $('.navbar-toggler').click(function(){
+//         $('#nav-fixed').css('position', 'relative');
+//     });
+// }
+// else {
+//     $('.navbar-toggler').click(function(){
+//         $('#nav-fixed').css('position', 'fixed');
+//     });
+// }
 
 
 // Theme Options

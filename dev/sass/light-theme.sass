@@ -1,19 +1,104 @@
 @import _variables
 
-body
-    color: #383838
+$nav-bg: rgba(#fff,.8)
+$nav-color: #fff
+$nav-scroller-bg: $color1
 
-// Blog
+$nav-scroll-bg: #fff
+$nav-scroll-color: #383838
+
+$nav-dd-bg: $color1
+$nav-dd-color: #fff
+$nav-dd-bg-2: $color2
+$nav-dd-color-2: #fff
+$nav-dd-scroll-bg: $color3
+$nav-dd-scroll-bg-hv: #fff
+$nav-dd-scroll-color: #fff
+$nav-dd-scroll-color-hv: #000
+
+body
+	color: #383838
+
+
+// ---------------------- //
+//       Navigation       //
+// ---------------------- //
+#nav-top,#nav-fixed
+	a
+		color: #fff
+	.navbar-toggler
+		border: 1px solid #383838
+	.dropdown-menu
+		background-color: rgba($nav-dd-bg,.6)
+		box-shadow: 2px 2px 2px rgba(#383838,.5)
+		a
+			color: #fff
+			&:hover
+				background-color: rgba($nav-dd-bg,.5) !important
+
+
+#nav-fixed.scrolled
+	background-color: $nav-color
+	a
+		color: $nav-scroll-color
+	.dropdown-menu
+		background-color: $nav-dd-scroll-bg !important
+		a
+			color: $nav-dd-scroll-color
+			&:hover
+				background-color: $nav-dd-scroll-bg-hv !important
+				color: $nav-dd-scroll-color-hv
+
+
+@media (max-width: 991px)
+	#nav-top, #nav-fixed
+		.dropdown-menu
+			box-shadow: 0 0 0 transparent
+
+	.navbar-collapse
+		padding: 20px
+		background-color: $nav-dd-bg
+		color: $nav-dd-color
+		.nav-link a
+			color: $nav-color
+		.nav-item
+			&:active,&:focus
+				background-color: $nav-dd-bg
+				color: $nav-dd-color
+		.dropdown-toggle
+			background-color: $nav-dd-bg
+			color: $nav-dd-color
+	.nav-item.dropdown.show
+		background-color: $nav-dd-bg
+		color: $nav-dd-color
+		.nav-link.dropdown-toggle
+			background-color: $nav-dd-bg-2
+			color: $nav-dd-color
+			.dropdown-menu .show
+				background-color: $nav-dd-bg-2
+				color: $nav-dd-color
+		
+// Nav Btn
+#nav-top .navbar-toggler, #nav-fixed .navbar-toggler
+	border: 1px solid rgba(249,249,249,.28)
+	&:active,&:focus,&:hover
+		border: 1px solid #f9f9f9
+
+
+// ---------------------- //
+//       Blog             //
+// ---------------------- //
+ 
 .blog-main
-    background-color: $gray-100
+	background-color: $gray-100
 
 // Section Colors
 .color-section-1
-    background-color: $gray-100
-    color: #000
+	background-color: $gray-100
+	color: #000
 .color-section-2
-    background-color: $gray-200
-    color: #000
+	background-color: $gray-200
+	color: #000
 
 hr.hr-2
-    border-top: 1px solid rgb(165, 165, 165)
+	border-top: 1px solid rgb(165, 165, 165)

@@ -104,6 +104,13 @@
 	background: linear-gradient($direction, $color1 0%, $color2 100%)
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color1, endColorstr=$color2, GradientType=0 )
 
+@mixin linear-gradient-4($deg, $color1a, $color1b, $color2a, $color2b)
+	background: rgba(39,15,42,1);
+	background: linear-gradient($deg, $color1a 0%, $color1b 31%, $color2a 64%, $color2b 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$color1a, endColorstr=$color2a, GradientType=1 );
+
+	// background: linear-gradient(135deg, rgba(39,15,42,1) 0%, rgba(39,15,42,1) 31%, rgba(87,59,99,1) 64%, rgba(87,59,99,1) 100%);
+	// filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#270f2a', endColorstr='#573b63', GradientType=1 );
 
 @mixin radial-gradient($color1, $color2)
 	background: $color1

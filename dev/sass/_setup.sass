@@ -16,16 +16,18 @@ $font2: 'Montserrat', sans-serif
 
 // Main Styles
 //-------------------------------------------------
-
+html,body
+	min-height: 100% !important
+    height: 100%
 body 
 	background-color: #fff
 	font-family: $font2
 	font-size: 1.2rem
 	color: #000000
 a
-	color: $gray-600
 	text-decoration: none
 	@include transition(0.2s)
+	color: $gray-600
 	&:hover
 		color: #ccc
 		text-decoration: none
@@ -64,6 +66,10 @@ hr
 	width: 100%
 	border: 1px solid rgba(232, 171, 171, 0.3)
 
+// Set Footer at page bottom
+.main-content
+	min-height: calc(100vh)
+
 // Helpers
 //-------------------------------------------------
 .padding-0
@@ -85,3 +91,5 @@ a.anchor
 	font-weight: 800
 .Hidden
 	display: none
+.flex-center
+	@include flex-center

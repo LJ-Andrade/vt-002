@@ -34,12 +34,12 @@ block content
 				.carousel-control-next-icon(aria-hidden="true")
 				.sr-only Next
 
-
-
 		// Main Blog
 		section.blog-main
 			.container
 				.row.inner.wow.fadeIn(data-wow-duration="2s")
+					.col-xs-12.col-sm-12.col-md-4
+						include includes/sidebar
 					.col-xs-12.col-sm-12.col-md-8
 						.blog-list
 							.blog-item
@@ -112,9 +112,7 @@ block content
 											li
 												a
 													i.fab.fa-twitter-square
-					.col-xs-12.col-sm-12.col-md-4
-						include includes/sidebar
-
+					
 		// Featured Posts
 		section.color-section-2
 			.container
@@ -129,8 +127,6 @@ block content
 									h4 #{multicdata[1]}
 									p #{multicdata[2]}
 									a(href="#") Read more...
-
-
 
 		// Contact Section
 		a.anchor#Contact
